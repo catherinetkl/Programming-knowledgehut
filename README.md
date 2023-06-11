@@ -9,12 +9,10 @@
 - :star: - current focus
 
 .
-└── readme.md\
-    ├── a\
-    │   └── nice\
-    │       └── tree\
-    │           ├── diagram\
-    │           └── :)\
+└── readme.md :seedling:\
+└── version-control-system\
+    ├── github.md :potted_plant:\
+    ├── git.md :potted_plant:\
     └── Use indentation\
         ├── to indicate\
         │   ├── file\
