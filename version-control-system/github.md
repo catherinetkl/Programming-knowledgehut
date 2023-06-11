@@ -10,7 +10,7 @@ Pre-requisites
   b. $ git config --global user.email johndoe@example.com
 3. To accessing GitHub through SSH. First generate an SSH key pair; then add the public key to GitHub.\
     a. Generate key pair, github prefers the "Ed25519 algorithm". Go to Git Bash\
-    b. $ ssh-keygen -t ed25519 -C "your_email@example.com"
+    b. $ ssh-keygen -t ed25519 -C "your_email@example.com"\
     c. Locate the hidden .ssh folder and copy the contents in the id_ed25519.pub file (~/.ssh/id_ed25519.pub)
 4. In the upper-right corner of GitHub page, click your profile photo, then click Settings.
 5. In the "Access" section of the sidebar, click SSH and GPG keys.
