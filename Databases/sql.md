@@ -33,6 +33,6 @@ You'll likely need to run the following commands to be able to execute the mysql
 # Create databases
 CREATE DATABASE <database name>
 
-# Show databases
+# To list available databases
 SHOW DATABASES;
 
