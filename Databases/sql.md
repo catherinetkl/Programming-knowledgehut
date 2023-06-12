@@ -15,7 +15,7 @@ You'll likely need to run the following commands to be able to execute the mysql
    b. Run $ open ~/.bash_profile
    c. Paste the line at the end of the file: export PATH=${PATH}:/usr/local/mysql/bin
    d. Save the changes of the file
-4. Run $ mysql -u root -p
+4. Run $ mysql -u root -p (to log in as the root user)
 5. You'll be prompted to input your password set for the root user
 6. If you successfully logged in, you'll be greeted by the message:\
    Welcome to the MySQL monitor.  Commands end with ; or \g.\
