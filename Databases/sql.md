@@ -29,3 +29,10 @@ You'll likely need to run the following commands to be able to execute the mysql
    owners.
 
    Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+# Create databases
+CREATE DATABASE <database name>
+
+# Show databases
+SHOW DATABASES;
+
