@@ -241,19 +241,21 @@ Information contained in an inode:
 Soft link is a pointer(file) to the original file (similar to windows shortcut)\
 Smaller file size compared to the original file\
 Inode number of soft link is different from that of the original file\
+``` bash
    inode #100 : original file\
    softlink1 : inode #200\
    softlink2 : inode #300
-   
+```
 If we delete original file, softlinks become useless!
 
 Hard link is different name of the original file (Like a duplicate copy of the original file)
 Having same file size as original file\
 Inode number of hardlink is the EXACTLY SAME as the original file\
+``` bash
   inode #100 <------ original file\
   inode #100 <------ hardlink1\
   inode #100 <------ hardlink2
- 
+ ```
  If we delete the original file, the hard links will still contain data that were in original file
        
 
