@@ -379,7 +379,8 @@ iii. find by recursive method (use type flag to find links, limit search using m
 
 #### i. Find by exact filename
 ``` bash
-# With option -samefile we add our filename or directory.
+# With option -samefile we add our filename or directory
+# -L flag to locate broken links
 # The search executed everywhere using root directory ” / ”  as the working directory.
 [mogamal@server1:~/test]find -L / -samefile file1.txt
 /home/mogamal/test/file1.txt
@@ -392,6 +393,23 @@ find: ‘/etc/polkit-1/localauthority’: Permission denied
 # for better readability, use redirections to redirect errors like “permission denied ” to /dev/null space
 [mogamal@server1:~/test]find -L / -samefile file1.txt 2> /dev/null
 /home/mogamal/test/file1.txt
+/tmp/filelink
+/opt/filelink2
+/srv/filelink3
+```
+#### ii. Find by inode number
+``` bash
+# use stat on a file to see which inode number it refers to
+[mogamal@server1:~/test]stat file1.txt
+  File: file1.txt
+  Size: 11              Blocks: 8          IO Block: 4096   regular file
+Device: 810h/2064d      Inode: 94804       Links: 1
+```
+``` bash
+# file1.txt refers to inode 94804
+# use -inum action which refers to the inode of the file:
+[mogamal@server1:~/test]find -L / -inum 94804 2> /dev/null 
+/home/mogamal/test/file1.txt 
 /tmp/filelink
 /opt/filelink2
 /srv/filelink3
