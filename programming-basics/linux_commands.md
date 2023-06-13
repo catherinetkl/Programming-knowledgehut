@@ -297,8 +297,9 @@ When a file is duplicated(copied), you assign new blocks on disk with same conte
 Hard-linking does not duplicate content of the file it links to, you are using disk space to store the name of original file, not actual file content and you directly manipulate the original file
  
 ### Create Soft link (Symlink) to a file/directory
-1. Create symlink for the files (-s flag specify symbolic link)
+1. Create symlink for the files 
 ``` bash
+# ln - link files; -s flag (specify symbolic link)
 $ ln  -s <original filename> <link name>
 ```
 2. Create links for the directory (-s flag specify symbolic link)
