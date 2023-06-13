@@ -262,10 +262,14 @@ Inode number of soft link is different from that of the original file
    inode #200 <------ softlink1
    inode #300 <------ softlink2  
 ```
-If we delete or move the original file, softlinks will not work properly (AKA Hanging links)!\
-If we change the name of the original file, all the soft links for that file become dangling i.e. they are worthless now.
+The file and shortcut share the same content\
+If you modify the content of the shortcut, changes will be applied to the content of the file\
+If you delete the shortcut, only the reference to the first inode is deleted, contents of the file on disk won't be lost\
+If you delete or move the original file, softlinks will not work properly (AKA Hanging links)!\
+If we change the name of the original file, all the soft links for that file become dangling\
+i.e. they are worthless since the symbolic link loses reference to the first inode, unable to read file (consequence)
 
-Hard link is different name of the original file (Like a duplicate copy of the original file)\
+Hard link is different name of the original file (But you are directly manipulating the file)\
 Having same file size as original file\
 We cannot create a hard link for a directory to avoid recursive loops\
 Inode number of hardlink is the EXACTLY SAME as the original file
@@ -278,8 +282,19 @@ Inode number of hardlink is the EXACTLY SAME as the original file
   inode #100 <------ hardlink1
   inode #100 <------ hardlink2
  ```
- If we delete the original file, the hard links will still contain data that were in original file\
+ If you modify the content in the original file, it will be modified in the hard link file\
+ Likewise, if you modify content in hard link file, the contents in original file will be modified\
+ If you delete the hard link file, you can still access original file content\
+ However, if you delete the original file, the hard links will still contain data that were in original file\
  Removing hard link, just reduces the link count, but doesn’t affect other links
+ 
+#### Difference between copying & creating hard link
+<div style="width:1399px; height:661px; background-color: #FFFFFF">
+<img src="https://devconnected.com/wp-content/uploads/2019/08/copying-a-file-768x419.png" title="Understanding Hard links">
+</div>
+
+When a file is duplicated(copied), you assign new blocks on disk with same content as original file and the inode is different\
+Hard-linking does not duplicate content of the file it links to, you are using disk space to store the name of original file, not actual file content and you directly manipulate the original file
  
 ### Create Soft link (Symlink) to a file/directory
 1. Create symlink for the files (-s flag specify symbolic link)
