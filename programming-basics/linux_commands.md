@@ -220,7 +220,7 @@ Third number (4) represents permission for others: 4 = 4(read)
 First character refers to type of input
    - "-" refers to file
    - "d" refers to directory
-   - "i" refers to symlink, which is a shortcut for a file or directory
+   - "l" refers to symlink, which is a shortcut for a file or directory
  
 Group next set of letters (rwx maximum 3 per group) refers to permissions for user, group and others
 
