@@ -27,7 +27,8 @@ cd ..
 ```
 
 ## Listing files inside a directory
-1. Listing files & directories in long format inside current directory (better readability)
+1. Listing files & directories in long format inside current directory (better readability)\
+   Finding existing permissions of a file
 ``` bash
 ls -l
 ```
@@ -175,7 +176,7 @@ chmod -R <specifications> dir-name
  </tbody>
 </table>
 
-### How to manage permissions in symbolic mode
+### How to manage permissions in symbolic mode (more powerful than octal because we can mask out permission bits)
 3. Add read, write or execute permissions for owner/user for file, install.sh
 ``` bash
 chmod u+rwx install.sh
@@ -197,10 +198,12 @@ chmod go -r myfile
 chown owner1 filename
 ```
 
-### How to manage permissions in octal mode
+### How to manage permissions in octal mode (permission modes are absolute, cannot be used to change individual bits)
 ``` bash
 chmod 744 install.sh
 ```
 First number (7) represents permission for user: 7 = 4(read) + 2(write) + 1(execute)\
 Second number (4) represents permission for group: 4 = 4(read)\
-Third number (4) represents permission for others: 4 = 4(read)\
+Third number (4) represents permission for others: 4 = 4(read)
+
+
