@@ -7,6 +7,7 @@ source:
 5. https://www.geeksforgeeks.org/soft-hard-links-unixlinux/
 6. https://clubmate.fi/symbolic-links-and-hard-links-creating-updating-deleting-and-all-that
 7. https://devconnected.com/understanding-hard-and-soft-links-on-linux/
+8. https://www.baeldung.com/linux/find-all-links-for-file
 
 ## Basic Linux Commands
 Note: after the command e.g. ls, the options are called command flags (such as -a -R)
@@ -370,4 +371,28 @@ Access: Tue Jan 20 09:14:04 2015
 Modify: Tue Jan 20 09:14:04 2015
 Change: Tue Jan 20 09:14:04 2015
  Birth: Tue Jan 20 09:14:04 2015
+```
+### How to find links on a filesystem
+i. find by exact filename\
+ii. find by inode number\
+iii. find by recursive method (use type flag to find links, limit search using maxdepth parameter)
+
+#### i. Find by exact filename
+``` bash
+# With option -samefile we add our filename or directory.
+# The search executed everywhere using root directory ” / ”  as the working directory.
+[mogamal@server1:~/test]find -L / -samefile file1.txt
+/home/mogamal/test/file1.txt
+/tmp/filelink
+/opt/filelink2
+/srv/filelink3
+find: ‘/etc/polkit-1/localauthority’: Permission denied
+``` 
+``` bash
+# for better readability, use redirections to redirect errors like “permission denied ” to /dev/null space
+[mogamal@server1:~/test]find -L / -samefile file1.txt 2> /dev/null
+/home/mogamal/test/file1.txt
+/tmp/filelink
+/opt/filelink2
+/srv/filelink3
 ```
