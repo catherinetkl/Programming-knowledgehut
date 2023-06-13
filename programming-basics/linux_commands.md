@@ -500,3 +500,21 @@ $ id
 <div style="width:1399px; height:661px; background-color: #FFFFFF">
 <img src="https://devconnected.com/wp-content/uploads/2019/10/id-command.png" title="id output">
 </div>
+<table>
+ <thead>
+  <tr>
+   <th>Account Type</th><th>UID</th><th>GID</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Root</td><td>0</td><td>0</td>
+  </tr>
+  <tr>
+   <td>System</td><td>1 to 500 or 1 to 999 (Debian-based systems)</td><td></td>
+  </tr>
+  <tr>
+   <td>User</td><td>1000</td><td>1</td>
+  </tr>
+ </tbody>
+</table>
