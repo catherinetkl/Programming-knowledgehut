@@ -62,7 +62,7 @@ ls -lh
 ``` bash
 ls -lR
 ```
-8. Generate tree representation of file system starting from current directory\
+9. Generate tree representation of file system starting from current directory\
 Tree is a recursive directory listing command that produces a depth indented listing of files
 ``` bash
 tree
