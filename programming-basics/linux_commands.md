@@ -137,22 +137,6 @@ chmod <specifications> filename
 ``` bash
 chmod -R <specifications> dir-name
 ```
-3. Add read permissions for owner and group
-``` bash
-chmod go=+r myfile
-```
-4. Allow all users to read, write or execute permissions myfile
-``` bash
-chmod a +rwx myfile
-```
-5. Remove/revoke read permissions from group and others for myfile
-``` bash
-chmod go -r myfile
-```
-6. Change ownership of a file to user owner1
-``` bash
-chown owner1 filename
-```
 <table>
  <thead>
   <tr>
@@ -190,3 +174,27 @@ chown owner1 filename
   </tr>
  </tbody>
 </table>
+
+### How to manage permissions in symbolic mode
+3. Add read, write or execute permissions for owner/user for file, install.sh
+``` bash
+chmod u+rwx install.sh
+```
+4. Add read permissions for owner and group for myfile
+``` bash
+chmod go+r myfile
+```
+5. Allow all users to read, write or execute permissions myfile
+``` bash
+chmod a +rwx myfile
+```
+6. Remove/revoke read permissions from group and others for myfile
+``` bash
+chmod go -r myfile
+```
+7. Change ownership of a file to user owner1
+``` bash
+chown owner1 filename
+```
+
+### How to manage permissions in octal mode
