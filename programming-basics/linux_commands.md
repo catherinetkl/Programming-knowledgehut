@@ -6,6 +6,7 @@ source:
 4. https://www.freecodecamp.org/news/file-permissions-in-linux-chmod-command-explained/
 5. https://www.geeksforgeeks.org/soft-hard-links-unixlinux/
 6. https://clubmate.fi/symbolic-links-and-hard-links-creating-updating-deleting-and-all-that
+7. https://devconnected.com/understanding-hard-and-soft-links-on-linux/
 
 ## Basic Linux Commands
 Note: after the command e.g. ls, the options are called command flags (such as -a -R)
@@ -257,6 +258,10 @@ Inode number of soft link is different from that of the original file
    inode #200 <------ softlink1
    inode #300 <------ softlink2  
 ```
+<div style="width:1399px; height:661px; background-color: #FFFFFF">
+<img src="https://devconnected.com/wp-content/uploads/2019/08/sooft-links.png" title="Understanding Soft links">
+</div>
+
 If we delete or move the original file, softlinks will not work properly (AKA Hanging links)!\
 If we change the name of the original file, all the soft links for that file become dangling i.e. they are worthless now.
 
