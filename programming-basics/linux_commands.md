@@ -180,13 +180,13 @@ chown owner1 filename
  </thead>
  <tbody>
   <tr>
-   <td>User</td><td>u</td><td><main priority></td>
+   <td>User</td><td>u</td><td>main priority</td>
   </tr>
   <tr>
-   <td>Group</td><td>g</td><td><middle priority></td>
+   <td>Group</td><td>g</td><td>middle priority</td>
   </tr>
   <tr>
-   <td>Others</td><td>o</td><td><least priority></td>
+   <td>Others</td><td>o</td><td>least priority</td>
   </tr>
  </tbody>
 </table>
