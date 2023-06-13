@@ -5,6 +5,7 @@ source:
 3. https://sourabhbajaj.com/mac-setup/iTerm/tree.html
 4. https://www.freecodecamp.org/news/file-permissions-in-linux-chmod-command-explained/
 5. https://www.geeksforgeeks.org/soft-hard-links-unixlinux/
+6. https://clubmate.fi/symbolic-links-and-hard-links-creating-updating-deleting-and-all-that
 
 ## Basic Linux Commands
 Note: after the command e.g. ls, the options are called command flags (such as -a -R)
@@ -269,7 +270,7 @@ Inode number of hardlink is the EXACTLY SAME as the original file
  If we delete the original file, the hard links will still contain data that were in original file
  
 ### Create Soft link (Symlink) to a file/directory
-1. Create links for the files (-s flag specify symbolic link)
+1. Create symlink for the files (-s flag specify symbolic link)
 ``` bash
 $ ln  -s <original filename> <link name>
 ```
@@ -309,4 +310,16 @@ $ rm -d symlink_to_dir/
 ``` bash
 # forcefully removes the symlink from 
 $ rm -f symlink_to_dir/
+```
+### Create Hard link to a file/directory
+``` bash
+┌──The link command
+│
+│                          ┌──Path to the intended link, can use . or ~
+│                          │
+│                    ┌─────┴──────┐
+ln /path/to/original /path/to/link
+    └───────┬───────┘
+            └──Path to the original file/folder can
+               use . or ~ or other relative paths
 ```
