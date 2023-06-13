@@ -250,6 +250,7 @@ Information contained in an inode:
 #### Soft link (Symbolic link) vs Hard link
 Soft link is a pointer(file) to the original file (similar to windows shortcut)\
 Smaller file size compared to the original file\
+Link across file systems: If you want to link files across the file systems, you can only use symlinks/soft links\
 Inode number of soft link is different from that of the original file
 ``` bash
    inode #100 <------ originalfile
@@ -261,13 +262,15 @@ If we change the name of the original file, all the soft links for that file bec
 
 Hard link is different name of the original file (Like a duplicate copy of the original file)\
 Having same file size as original file\
+We cannot create a hard link for a directory to avoid recursive loops\
 Inode number of hardlink is the EXACTLY SAME as the original file
 ``` bash
   inode #100 <------ originalfile
   inode #100 <------ hardlink1
   inode #100 <------ hardlink2
  ```
- If we delete the original file, the hard links will still contain data that were in original file
+ If we delete the original file, the hard links will still contain data that were in original file\
+ Removing hard link, just reduces the link count, but doesn’t affect other links
  
 ### Create Soft link (Symlink) to a file/directory
 1. Create symlink for the files (-s flag specify symbolic link)
