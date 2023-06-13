@@ -206,4 +206,6 @@ First number (7) represents permission for user: 7 = 4(read) + 2(write) + 1(exec
 Second number (4) represents permission for group: 4 = 4(read)\
 Third number (4) represents permission for others: 4 = 4(read)
 
-
+<div style="width:253px; height:222px; background-color: #FFFFFF">
+<img src="https://www.freecodecamp.org/news/content/images/2022/12/permissions-1.png" alt="output of ls -l" title="Existing permissions output description">
+</div>
