@@ -407,10 +407,36 @@ Device: 810h/2064d      Inode: 94804       Links: 1
 ```
 ``` bash
 # file1.txt refers to inode 94804
-# use -inum action which refers to the inode of the file:
+# use -inum action which refers to the inode of the file
+# redirect errors like “permission denied ” to /dev/null space
 [mogamal@server1:~/test]find -L / -inum 94804 2> /dev/null 
 /home/mogamal/test/file1.txt 
 /tmp/filelink
 /opt/filelink2
 /srv/filelink3
+```
+#### iii. Find by recursive method (use type flag to find links, limit search using maxdepth parameter)
+``` bash
+# -type allows multiple types to be specified
+# when we specify the type as small L (l for the link), it displays all soft links in the specified path
+# -ls option to list the full attributes of the links
+[mogamal@server1:~/test]find / -type l -ls 2> /dev/null | more
+    94809      0 lrwxrwxrwx   1 mogamal  mogamal        23 Jun 11 17:11 /tmp/dirlink -> /home/mogamal/test/dir1
+    94805      0 lrwxrwxrwx   1 mogamal  mogamal        28 Jun 11 16:52 /srv/filelink -> /home/mogamal/test/file1.txt
+    94808      0 lrwxrwxrwx   1 mogamal  mogamal        28 Jun 11 17:00 /tmp/filelink2 -> /home/mogamal/test/file1.txt
+    94810      0 lrwxrwxrwx   1 mogamal  mogamal        24 Jun 11 17:11 /srv/dirlink2 -> /home/mogamal/test/dir1/
+...
+```
+``` bash
+# grep command to match the filename pattern which is file1.txt or dir1
+[mogamal@server1:~/test]find / -type l -ls 2> /dev/null | grep dir1
+    94809      0 lrwxrwxrwx   1 mogamal  mogamal        23 Jun 11 17:11 /tmp/dirlink -> /home/mogamal/test/dir1
+    94810      0 lrwxrwxrwx   1 mogamal  mogamal        24 Jun 11 17:11 /srv/dirlink2 -> /home/mogamal/test/dir1/
+...
+```
+``` bash
+# to limit searches to the current directory, you have to use the maxdepth parameter
+$ find . -maxdepth 1 -type l -ls 
+262558      0 lrwxrwxrwx   1 schkn    schkn           7 Aug 14 20:14 ./shortcut-folder -> folder/
+258539      0 lrwxrwxrwx   1 schkn    schkn           3 Jan 26 20:19 ./soft-job -> job
 ```
