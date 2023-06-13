@@ -255,7 +255,8 @@ Inode number of soft link is different from that of the original file
    inode #200 <------ softlink1
    inode #300 <------ softlink2  
 ```
-If we delete original file, softlinks become useless!
+If we delete or move the original file, softlinks will not work properly (AKA Hanging links)!\
+If we change the name of the original file, all the soft links for that file become dangling i.e. they are worthless now.
 
 Hard link is different name of the original file (Like a duplicate copy of the original file)\
 Having same file size as original file\
@@ -267,5 +268,45 @@ Inode number of hardlink is the EXACTLY SAME as the original file
  ```
  If we delete the original file, the hard links will still contain data that were in original file
  
- 
+### Create Soft link (Symlink) to a file/directory
+1. Create links for the files (-s flag specify symbolic link)
+``` bash
+$ ln  -s <original filename> <link name>
+```
+2. Create links for the directory (-s flag specify symbolic link)
+``` bash
+$ ln -s <target_directory> <link_name>
+```
+### Remove Soft link (Symlink) to a file/directory
+#### 2 main commands when removing Symbolic links
+i. rm (removes given files and directories, accepts multiple arguments)\
+ii. unlink (deletes a given file, only accepts single argument)\
 
+1. Remove symlinks for the file (on success, command exits with zero and displays no output)
+``` bash
+$ rm symlink_name
+```
+2. Receive prompting prior to removing symlinks for the file (to confirm type y and press Enter)
+``` bash
+$ rm -i symlink_name
+```
+``` bash
+# Output
+rm: remove symbolic link 'symlink_name'?
+```
+
+3. Remove symlinks for multiple files (pass names of symlinks as arguments separated by space)
+``` bash
+$ rm symlink1 symlink2
+```
+4. Remove symbolic link that points to a directory
+``` bash
+$ rm -r symlink_to_dir/
+```
+``` bash
+$ rm -d symlink_to_dir/
+```
+``` bash
+# forcefully removes the symlink from 
+$ rm -f symlink_to_dir/
+```
