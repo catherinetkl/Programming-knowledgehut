@@ -9,6 +9,7 @@ source:
 7. https://devconnected.com/understanding-hard-and-soft-links-on-linux/
 8. https://www.baeldung.com/linux/find-all-links-for-file
 9. https://www.networkworld.com/article/3256288/linux-to-recurse-or-not.html
+10. https://devconnected.com/user-administration-complete-guide-on-linux/
 
 ## Basic Linux Commands
 Note: after the command e.g. ls, the options are called command flags (such as -a -R)
