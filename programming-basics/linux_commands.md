@@ -172,3 +172,21 @@ chown owner1 filename
  </tbody>
 </table>
 
+<table>
+ <thead>
+  <tr>
+   <th>Access</th><th>Symbolic Mode (u+rwx,g+rw,o+r)</th><th>Octal Mode (764 -- user, group, others)</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>User</td><td>u</td><td><main priority></td>
+  </tr>
+  <tr>
+   <td>Group</td><td>g</td><td><middle priority></td>
+  </tr>
+  <tr>
+   <td>Others</td><td>o</td><td><least priority></td>
+  </tr>
+ </tbody>
+</table>
