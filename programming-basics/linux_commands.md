@@ -269,6 +269,10 @@ Hard link is different name of the original file (Like a duplicate copy of the o
 Having same file size as original file\
 We cannot create a hard link for a directory to avoid recursive loops\
 Inode number of hardlink is the EXACTLY SAME as the original file
+<div style="width:1399px; height:661px; background-color: #FFFFFF">
+<img src="https://devconnected.com/wp-content/uploads/2019/08/hard-soft-links-768x499.png" title="Understanding Hard links">
+</div>
+
 ``` bash
   inode #100 <------ originalfile
   inode #100 <------ hardlink1
