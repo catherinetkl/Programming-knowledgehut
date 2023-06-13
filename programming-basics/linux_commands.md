@@ -242,7 +242,7 @@ Soft link is a pointer(file) to the original file (similar to windows shortcut)\
 Smaller file size compared to the original file\
 Inode number of soft link is different from that of the original file\
 ``` bash
-   inode #100 : original file
+   originalfile : inode #100
    softlink1 : inode #200
    softlink2 : inode #300
 ```
