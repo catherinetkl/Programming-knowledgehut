@@ -198,3 +198,9 @@ chown owner1 filename
 ```
 
 ### How to manage permissions in octal mode
+``` bash
+chmod 744 install.sh
+```
+First number (7) represents permission for user: 7 = 4(read) + 2(write) + 1(execute)\
+Second number (4) represents permission for group: 4 = 4(read)\
+Third number (4) represents permission for others: 4 = 4(read)\
