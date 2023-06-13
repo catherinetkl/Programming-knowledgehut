@@ -311,7 +311,7 @@ $ rm -r symlink_to_dir/
 $ rm -d symlink_to_dir/
 ```
 ``` bash
-# forcefully removes the symlink from 
+# -f flag (forcefully removes the symlink from directory)
 $ rm -f symlink_to_dir/
 ```
 ### Create Hard link to a file/directory
@@ -325,4 +325,20 @@ ln /path/to/original /path/to/link
     └───────┬───────┘
             └──Path to the original file/folder can
                use . or ~ or other relative paths
+```
+   a. Display all the attributes stored into the inode
+``` bash
+# stat - get file status; -x Display information in a more verbose way as known from some Linux distributions
+$ stat -x File_A
+```
+``` bash
+# Output
+    File: "File_A"
+    Size: 7            FileType: Regular File
+    Mode: (0644/-rw-r--r--)         Uid: (  501/   bob)  Gid: (   20/   staff)
+Device: 1,4   Inode: 51882811    Links: 1
+Access: Tue Jan 20 09:14:04 2015
+Modify: Tue Jan 20 09:14:04 2015
+Change: Tue Jan 20 09:14:04 2015
+ Birth: Tue Jan 20 09:14:04 2015
 ```
