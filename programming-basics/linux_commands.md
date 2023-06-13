@@ -226,8 +226,14 @@ Group next set of letters (rwx maximum 3 per group) refers to permissions for us
 
 #### Inode
 Every file in the system has an inode (index node)\
-It is a file data structure that stores information about any Linux file except its name and data (file contents)\
-They are independent of filenames. You can copy a single file, rename it, and still have it point to the same inode as the original.
+It is an object that stores information (metadata) about any file within your filesystem in Linux operating system except its name and data (file contents)\
+They are independent of filenames\
+- You can copy a single file, rename it, and still have it point to the same inode as the original
+
+Inodes are specific to the file system, storage device, the partition\
+Inodes are one-to-one match to a file\
+ - Every file has an inode
+ - Every directory has an inode
 
 Information contained in an inode:
 - Inode number
@@ -239,7 +245,6 @@ Information contained in an inode:
 - Device on which the file is stored 
 - Creation, read, and write timestamps
 - Location of the data (though not the filepath)
-
 
 #### Soft link (Symbolic link) vs Hard link
 Soft link is a pointer(file) to the original file (similar to windows shortcut)\
@@ -261,5 +266,6 @@ Inode number of hardlink is the EXACTLY SAME as the original file\
   inode #100 <------ hardlink2
  ```
  If we delete the original file, the hard links will still contain data that were in original file
-       
+ 
+ 
 
