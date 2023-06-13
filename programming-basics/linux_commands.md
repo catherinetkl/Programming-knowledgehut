@@ -252,7 +252,7 @@ Hard link is different name of the original file (Like a duplicate copy of the o
 Having same file size as original file\
 Inode number of hardlink is the EXACTLY SAME as the original file\
 ``` bash
-  inode #100 <------ original file
+  inode #100 <------ originalfile
   inode #100 <------ hardlink1
   inode #100 <------ hardlink2
  ```
