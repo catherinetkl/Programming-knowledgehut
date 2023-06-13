@@ -41,20 +41,24 @@ ls -ld
 ``` bash
 ls -a
 ```
-4. Appends symbol at the end of a filename to indicate its type\
+4. List files and Appends symbol at the end of a filename to indicate its type\
 (* -- executable; / -- directory; @ -- symbolic link; = -- socket; | -- pipe; > -- door)
 ``` bash
 ls -F
 ```
-5. Listing files sorted by last modified time in long format (top -- most recently modified files)
+5. Print the index number of each file
+``` bash
+ls -i
+```
+6. Listing files sorted by last modified time in long format (top -- most recently modified files)
 ``` bash
 ls -lt
 ```
-6. Listing files in human readable format
+7. Listing files in human readable format (sizes like 1K 234M 2G etc)
 ``` bash
 ls -lh
 ```
-7. Display all subdirectories recursively (long format)
+8. Display all subdirectories recursively (long format)
 ``` bash
 ls -lR
 ```
