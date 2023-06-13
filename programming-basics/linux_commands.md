@@ -312,7 +312,10 @@ ii. unlink (deletes a given file, only accepts single argument)
 
 1. Remove symlinks for the file (on success, command exits with zero and displays no output)
 ``` bash
+# Approach 1: rm
 $ rm symlink_name
+# Approach 2: unlink (safer approach)
+$ unlink symlink_name
 ```
 2. Receive prompting prior to removing symlinks for the file (to confirm type y and press Enter)
 ``` bash
