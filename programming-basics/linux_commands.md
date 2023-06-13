@@ -253,15 +253,14 @@ Soft link is a pointer(file) to the original file (similar to windows shortcut)\
 Smaller file size compared to the original file\
 Link across file systems: If you want to link files across the file systems, you can only use symlinks/soft links\
 Inode number of soft link is different from that of the original file
+<div style="width:1399px; height:661px; background-color: #FFFFFF">
+<img src="https://devconnected.com/wp-content/uploads/2019/08/sooft-links.png" title="Understanding Soft links">
+</div>
 ``` bash
    inode #100 <------ originalfile
    inode #200 <------ softlink1
    inode #300 <------ softlink2  
 ```
-<div style="width:1399px; height:661px; background-color: #FFFFFF">
-<img src="https://devconnected.com/wp-content/uploads/2019/08/sooft-links.png" title="Understanding Soft links">
-</div>
-
 If we delete or move the original file, softlinks will not work properly (AKA Hanging links)!\
 If we change the name of the original file, all the soft links for that file become dangling i.e. they are worthless now.
 
