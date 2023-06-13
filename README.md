@@ -16,5 +16,5 @@
 │  └─ linux_commands.md :seedling:\
 └─ Version-control-system\
    ├─ git.md :seedling:\
-   └─ github.md :seedling:\
+   └─ github.md :seedling:
 
