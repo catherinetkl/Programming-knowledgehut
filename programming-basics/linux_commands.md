@@ -3,6 +3,7 @@ source:
 1. https://man7.org/linux/man-pages/dir_all_alphabetic.html
 2. https://books.goalkicker.com/LinuxBook/
 3. https://sourabhbajaj.com/mac-setup/iTerm/tree.html
+4. https://www.freecodecamp.org/news/file-permissions-in-linux-chmod-command-explained/
 
 ## Basic Linux Commands
 Note: after the command e.g. ls, the options are called command flags (such as -a -R)
@@ -121,7 +122,13 @@ mkdir -p dir-name/sub-dir-name
 ``` bash
 touch filename
 ```
+
 ### Permissions and Groups for Files/Directory
+#### 3 main commands when managing file permissions
+i. chmod (Change mode)\
+ii. chown (Change ownership)\
+iii. chgrp (Change group)
+
 1. Change file permissions (Specifications: u -- user; g -- group; o -- other; + -- add permissions; - remove; r -- read; w -- write; x -- execute)
 ``` bash
 chmod <specifications> filename
@@ -138,7 +145,7 @@ chmod go=+r myfile
 ``` bash
 chmod a +rwx myfile
 ```
-5. Remove read permissions from group and others for myfile
+5. Remove/revoke read permissions from group and others for myfile
 ``` bash
 chmod go -r myfile
 ```
@@ -146,3 +153,22 @@ chmod go -r myfile
 ``` bash
 chown owner1 filename
 ```
+<table>
+ <thead>
+  <tr>
+   <th>Access</th><th>Symbolic Mode</th><th>Octal Mode</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Read</td><td>r</td><td>4</td>
+  </tr>
+  <tr>
+   <td>Write</td><td>w</td><td>2</td>
+  </tr>
+  <tr>
+   <td>Execute</td><td>x</td><td>1</td>
+  </tr>
+ </tbody>
+</table>
+
