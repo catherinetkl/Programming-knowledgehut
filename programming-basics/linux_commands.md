@@ -256,6 +256,7 @@ Inode number of soft link is different from that of the original file
 <div style="width:1399px; height:661px; background-color: #FFFFFF">
 <img src="https://devconnected.com/wp-content/uploads/2019/08/sooft-links.png" title="Understanding Soft links">
 </div>
+
 ``` bash
    inode #100 <------ originalfile
    inode #200 <------ softlink1
