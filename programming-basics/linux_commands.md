@@ -175,7 +175,7 @@ chown owner1 filename
 <table>
  <thead>
   <tr>
-   <th>Access</th><th>Symbolic Mode (u+rwx,g+rw,o+r)</th><th>Octal Mode (764 -- user, group, others)</th>
+   <th>Access</th><th>Symbolic Mode<br>(u+rwx,g+rw,o+r)</th><th>Octal Mode<br> (764 -- user, group, others)</th>
   </tr>
  </thead>
  <tbody>
