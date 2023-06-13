@@ -206,6 +206,10 @@ chmod go -r myfile
 ``` bash
 chown owner1 filename
 ```
+8. Change primary group ownership of directory dir-name to group grp_owner recursively
+``` bash
+chown -R grp_owner dir-name
+```
 
 ### How to manage permissions in octal mode (permission modes are absolute, cannot be used to change individual bits)
 ``` bash
@@ -438,8 +442,8 @@ Device: 810h/2064d      Inode: 94804       Links: 1
 ``` bash
 # to limit searches to the current directory, you have to use the maxdepth parameter
 $ find . -maxdepth 1 -type l -ls 
-262558      0 lrwxrwxrwx   1 schkn    schkn           7 Aug 14 20:14 ./shortcut-folder -> folder/
-258539      0 lrwxrwxrwx   1 schkn    schkn           3 Jan 26 20:19 ./soft-job -> job
+   262558      0 lrwxrwxrwx   1 schkn   schkn           7 Aug 14 20:14 ./shortcut-folder -> folder/
+   258539      0 lrwxrwxrwx   1 schkn   schkn           3 Jan 26 2019 ./soft-job -> job
 ```
 ### To recurse or not?
 <table>
@@ -475,3 +479,23 @@ $ find . -maxdepth 1 -type l -ls
   </tr>
  </tbody>
 </table>
+
+### User Administration Basics on Linux
+#### 3 types of user accounts 
+i. Root account (most powerful, highest authority, can perform any operation e.g. change pw, kill processes, navigate to any directories on filesystem) \
+ii. System account (used by processes or programs on host e.g mail administration, run simple Apache server)\
+iii. User accounts (real users like you and I, team members, accounts created to retrieve some files on the host, can modify to give them correct configuration)
+
+### User Account Identifiers
+<div style="width:1399px; height:661px; background-color: #FFFFFF">
+<img src="https://devconnected.com/wp-content/uploads/2019/10/user-identify.png" title="User Identifier">
+</div>
+
+1. View information related to your ID 
+``` bash
+# UID used to uniquely identify users & categorize user accounts on a system
+$ id
+```
+<div style="width:1399px; height:661px; background-color: #FFFFFF">
+<img src="https://devconnected.com/wp-content/uploads/2019/10/id-command.png" title="id output">
+</div>
