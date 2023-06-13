@@ -1,5 +1,9 @@
 # Linux Commands 
 source: 
+1. https://man7.org/linux/man-pages/dir_all_alphabetic.html
+2. https://books.goalkicker.com/LinuxBook/
+3. https://sourabhbajaj.com/mac-setup/iTerm/tree.html
+
 ## Basic Linux Commands
 Note: after the command e.g. ls, the options are called command flags (such as -a -R)
 
