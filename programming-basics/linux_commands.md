@@ -46,9 +46,9 @@ ls -a
 ``` bash
 ls -F
 ```
-5. Print the index number of each file
+5. Print the index number of each file (inode number is on the column located at the extreme left)
 ``` bash
-ls -i
+ls -li
 ```
 6. Listing files sorted by last modified time in long format (top -- most recently modified files)
 ``` bash
