@@ -4,6 +4,7 @@ source:
 2. https://books.goalkicker.com/LinuxBook/
 3. https://sourabhbajaj.com/mac-setup/iTerm/tree.html
 4. https://www.freecodecamp.org/news/file-permissions-in-linux-chmod-command-explained/
+5. https://www.geeksforgeeks.org/soft-hard-links-unixlinux/
 
 ## Basic Linux Commands
 Note: after the command e.g. ls, the options are called command flags (such as -a -R)
@@ -209,3 +210,32 @@ Third number (4) represents permission for others: 4 = 4(read)
 <div style="width:253px; height:222px; background-color: #FFFFFF">
 <img src="https://www.freecodecamp.org/news/content/images/2022/12/permissions-1.png" alt="output of ls -l" title="Existing permissions output description">
 </div>
+
+First character refers to type of input
+   - "-" refers to file
+   - "d" refers to directory
+   - "i" refers to symlink, which is a shortcut for a file or directory
+ 
+Group next set of letters (rwx maximum 3 per group) refers to permissions for user, group and others
+
+### Linux Links
+
+#### Inode
+Every file in the system has an inode (index node)\
+It is a file data structure that stores information about any Linux file except its name and data (file contents)\
+They are independent of filenames. You can copy a single file, rename it, and still have it point to the same inode as the original.
+
+Information contained in an inode:
+- Inode number
+- File size
+- Owner information (User and group IDs associated with the file)
+- Permissions needed to access the file
+- File Type
+- Number of links
+- Device on which the file is stored 
+- Creation, read, and write timestamps
+- Location of the data (though not the filepath)
+
+
+#### Soft link (Symbolic link) vs Hard link
+Soft link is a pointer to the original file (similar to windows shortcut)
