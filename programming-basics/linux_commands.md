@@ -440,3 +440,37 @@ $ find . -maxdepth 1 -type l -ls
 262558      0 lrwxrwxrwx   1 schkn    schkn           7 Aug 14 20:14 ./shortcut-folder -> folder/
 258539      0 lrwxrwxrwx   1 schkn    schkn           3 Jan 26 20:19 ./soft-job -> job
 ```
+### To recurse or not?
+<table>
+ <thead>
+  <tr>
+   <th>Command</th><th>Option</th><th>comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>chown</td><td>-R</td><td></td>
+  </tr>
+  <tr>
+   <td>cp</td><td>-R or -r</td><td></td>
+  </tr>
+  <tr>
+   <td>grep</td><td>-R or -r</td><td>-R follows symlinks</td>
+  </tr>
+  <tr>
+   <td>find</td><td>NA</td><td>recurses by default</td>
+  </tr>
+  <tr>
+   <td>ls</td><td>-R/td><td></td>
+  </tr>
+  <tr>
+   <td>mkdir</td><td>-p</td><td>p = parent dirs</td>
+  </tr>
+  <tr>
+   <td>rm</td><td>-R or -r</td><td></td>
+  </tr>
+  <tr>
+   <td>zip</td><td>-r</td><td></td>
+  </tr>
+ </tbody>
+</table>
