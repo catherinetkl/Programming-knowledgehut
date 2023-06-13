@@ -227,11 +227,11 @@ Group next set of letters (rwx maximum 3 per group) refers to permissions for us
 #### Inode
 Every file in the system has an inode (index node)\
 It is an object that stores information (metadata) about any file within your filesystem in Linux operating system except its name and data (file contents)\
-They are independent of filenames\
+They are independent of filenames
 - You can copy a single file, rename it, and still have it point to the same inode as the original
 
 Inodes are specific to the file system, storage device, the partition\
-Inodes are one-to-one match to a file\
+Inodes are one-to-one match to a file
  - Every file has an inode
  - Every directory has an inode
 
@@ -257,7 +257,7 @@ Inode number of soft link is different from that of the original file
 ```
 If we delete original file, softlinks become useless!
 
-Hard link is different name of the original file (Like a duplicate copy of the original file)
+Hard link is different name of the original file (Like a duplicate copy of the original file)\
 Having same file size as original file\
 Inode number of hardlink is the EXACTLY SAME as the original file
 ``` bash
