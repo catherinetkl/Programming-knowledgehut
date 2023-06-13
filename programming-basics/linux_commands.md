@@ -1,6 +1,8 @@
 # Linux Commands 
 source: 
 ## Basic Linux Commands
+Note: after the command e.g. ls, the options are called command flags (such as -a -R)
+
 ### Directory navigation
 1. Full path of current working directory
 ``` bash
@@ -18,6 +20,7 @@ cd ~ or cd
 ``` bash
 cd ..
 ```
+
 ## Listing files inside a directory
 1. Listing files & directories in long format inside current directory (better readability)
 ``` bash
@@ -48,11 +51,31 @@ ls -lh
 ``` bash
 ls -lR
 ```
-8. Generate tree representation of file system starting from current directory
+8. Generate tree representation of file system starting from current directory\
+Tree is a recursive directory listing command that produces a depth indented listing of files
 ``` bash
 tree
 ```
+### Installation of Tree on Mac
+``` bash
+brew install tree
+```
+#### To limit the recursion you can pass an -L flag and specify the maximum depth tree will use when searching
+``` bash
+tree -L 1
+```
+will output:
+``` bash
+.
+├── Apps
+├── CONTRIBUTING.md
+├── Cpp
+├── Docker
+├── Git
+└── Go
 
+5 directories, 1 files
+```
 ### Create, copy and remove file/directory
 1. Copy file from source to destination, preserve original attributes of file (-p) while copying ie. file owner, timestamp, group, permissions
 ``` bash
@@ -93,4 +116,29 @@ mkdir -p dir-name/sub-dir-name
 10. Create a new file, if file does not exist, otherwise modify the timestamp of file to the current time
 ``` bash
 touch filename
+```
+### Permissions and Groups for Files/Directory
+1. Change file permissions (Specifications: u -- user; g -- group; o -- other; + -- add permissions; - remove; r -- read; w -- write; x -- execute)
+``` bash
+chmod <specifications> filename
+```
+2. Change file permissions of directory (and ALL contents within directory) recursively (Specifications: u -- user; g -- group; o -- other; + -- add permissions; - remove; r -- read; w -- write; x -- execute)
+``` bash
+chmod -R <specifications> dir-name
+```
+3. Add read permissions for owner and group
+``` bash
+chmod go=+r myfile
+```
+4. Allow all users to read, write or execute permissions myfile
+``` bash
+chmod a +rwx myfile
+```
+5. Remove read permissions from group and others for myfile
+``` bash
+chmod go -r myfile
+```
+6. Change ownership of a file to user owner1
+``` bash
+chown owner1 filename
 ```
