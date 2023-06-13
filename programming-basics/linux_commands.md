@@ -293,7 +293,7 @@ $ ln -s <target_directory> <link_name>
 ### Remove Soft link (Symlink) to a file/directory
 #### 2 main commands when removing Symbolic links
 i. rm (removes given files and directories, accepts multiple arguments)\
-ii. unlink (deletes a given file, only accepts single argument)\
+ii. unlink (deletes a given file, only accepts single argument)
 
 1. Remove symlinks for the file (on success, command exits with zero and displays no output)
 ``` bash
@@ -337,7 +337,8 @@ ln /path/to/original /path/to/link
 ```
    a. Display all the attributes stored into the inode
 ``` bash
-# stat - get file status; -x Display information in a more verbose way as known from some Linux distributions
+# stat : get file status
+# -x : Display information in a more verbose way as known from some Linux distributions
 $ stat -x File_A
 ```
 ``` bash
