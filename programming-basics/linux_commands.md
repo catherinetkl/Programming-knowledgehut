@@ -444,7 +444,7 @@ $ find . -maxdepth 1 -type l -ls
 <table>
  <thead>
   <tr>
-   <th>Command</th><th>Option</th><th>comment</th>
+   <th>Command</th><th>Option</th><th>Comment</th>
   </tr>
  </thead>
  <tbody>
