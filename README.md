@@ -13,7 +13,7 @@
 ├─ Databases\
 │  └─ sql.md :seedling:\
 ├─ Programming-basics\
-│  └─ linux_commands.md :seedling:\
+│  └─ linux_commands.md :potted_plant:\
 └─ Version-control-system\
    ├─ git.md :seedling:\
    └─ github.md :seedling:
