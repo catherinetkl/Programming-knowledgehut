@@ -566,10 +566,12 @@ su -
 yum upgrade
 ```
 <br>
+
 ``` bash
 # For Debian/Ubuntu server
 apt update && apt upgrade
 ```
+
 #### Superuser (Root)
 1. Switch to root user (in Root's environment, using root's environment variables)
 ``` bash
