@@ -511,7 +511,18 @@ iii. User accounts (real users like you and I, team members, accounts created to
 <img src="https://devconnected.com/wp-content/uploads/2019/10/user-identify.png" title="User Identifier">
 </div>
 
-1. View information related to your ID 
+#### Accounts have:
+- Username (or Login ID)
+- Second field used to be password, now it's marked with 'x' as a placeholder
+- User ID (UID)
+- Group ID (GID)
+- Comments
+- Home directory location
+- Shell
+
+Information are stored in the /etc/passwd file
+<br>
+1. View information related to your ID (tells you who you currently are) 
 ``` bash
 # UID used to uniquely identify users & categorize user accounts on a system
 $ id
@@ -540,3 +551,86 @@ $ id
  </tbody>
 </table>
 
+#### Remote root login over ssh session
+1. Login as a normal user account 
+``` bash
+ssh user1@server1.cyberciti.biz
+```
+2. Switch to root account
+``` bash
+su -
+```
+3. Update any package as sysadmin
+``` bash
+# For RHEL/CentOS server
+yum upgrade
+```
+<br>
+``` bash
+# For Debian/Ubuntu server
+apt update && apt upgrade
+```
+#### Superuser (Root)
+1. Switch to root user (in Root's environment, using root's environment variables)
+``` bash
+$ su -
+# need to supply root user account password when prompted
+Password: *******
+#
+```
+<br>
+``` bash
+# Once logged in, prompt changes from $ to #
+#
+```
+<br>
+Note: If you su -root, you become root, but you're using normal user's environment and variables.
+``` bash
+# Give you normal user's default shell
+echo $SHELL
+```
+
+2. Create new user account
+``` bash
+useradd <username>
+```
+3. Setting another user's password / Changing password of current user
+``` bash
+passwd <username>
+```
+4. Removing a user
+``` bash
+userdel <username>
+```
+5. Removing a user and its home folder
+``` bash
+userdel -r <username>
+```
+6. Listing groups the current user is in
+``` bash
+groups
+```
+7. Listing groups a user is in
+``` bash
+groups <username>
+```
+8. Display hostname of system in full (Fully Qualified Domain Name - FQDN)
+``` bash
+hostname -f
+```
+10. Display username of users logged in at the terminal
+``` bash
+whoami
+```
+11. Who recently used the system
+``` bash
+last
+```
+12. When was the last time root logged in as a user
+``` bash
+last root
+```
+13. Display all bad login attempts into the system for audit trail
+``` bash
+lastb
+```
