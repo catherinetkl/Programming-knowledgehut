@@ -202,3 +202,8 @@ Making use of Engineering practices helps in building quality products
 - Behaviour Driven Development
 - Continuous Integrations
 - Emergent Design
+
+## 3.10 Agile Principle 10 - Simplicity, the art of maximizing the amount of work not done, is essential
+Take a look around you, what can be removed but still gets your job done
+Similarly, when we build products, we may end up building things that the customer may not need
+Focus on building those features that are needed
