@@ -42,7 +42,7 @@ Later, they worked for other organizations as consultants and helped them succee
 
 In 2001, 17 of them met up at Snowbird resort and spent 2 days to jot down their common beliefs and principles
 
-## 2.1 Agile Value 1 -- Individual & Interactions over Processes and Tools
+## 2.1 Agile Value 1 - Individual & Interactions over Processes and Tools
 ### Why are processes needed?
 To streamline the way we interact and work together (be it as a team, customer & service provider or even as a family)
 
@@ -52,3 +52,29 @@ NOPE! Learn the mannerisms to ace your interactions with the locals
 Processes are very much required for people to interact\
 If processes impede that interaction, then we should change the processes to improve the interaction\
 Change the processes based on experience and learning, then processes are fulfilling its value
+
+## 2.1 Agile Value 2 - Working Software over Comprehensive Documentation
+### Example 
+Go to fine dining restaurant and order food, waiter writes everything on paper and confirms with you\
+Chef comes to you with the list of all the ingredients they are going to use and tells you the proportions to get you onboard on that\
+You go through it thoroughly and they give you a thumbs up\
+The waiter places on the table the following:
+- a comprehensive report of the profile of the chef
+- infographics of the process they will follow while cooking
+- a list of sauces with the labels that you can choose from along with the main course
+ Finally when food arrives, it is not up to your standard
+ 
+ ### Which is better?
+ A complete documentation of the food order that the customer placed OR
+ you get the customer to taste at different appropriate stages during the process of cooking
+ 
+ The latter adheres to the second value of Agile Manifesto
+ 
+ ### Why do we need documents that we create during product development?
+ E.g. Requirements specification, Design Documents, etc.
+ - Main purpose:  to establish Shared understanding
+ - For future reference (a SIDE-EFFECT)
+ - To prove to the customer that this is what they said
+
+Abstract products like software are very difficult to imagine and jot down on a piece of paper\ 
+Hence, anything that helps customer see and feel helps in shared understanding and building useful products
