@@ -648,3 +648,11 @@ last root
 ``` bash
 lastb
 ```
+14. Modify the user -- comment/description
+``` bash
+# -c comment (new value of user's password file comment field)
+usermod -c "Human Resources Admin" robert
+```
+``` bash
+robert:x:1007:1007:Human Resources Admin:/home/robert:/bin/bash
+```
