@@ -152,5 +152,5 @@ Let's say you have a group of business people who talk with the end-users and ga
 Developers develop the product based on what they understand from the documents
 Do you think this is effective? Why is it not effective?
 - Possibility that requirements could be misunderstood
-- With each hand-off, there could be potential loss of information 
+- With each hand-off, there could be potential loss of information \
 In essence, there must be <b>DAILY INTERACTION</b> between the developers and business people to ensure the right practice is effectively built to solve the end-users problems
