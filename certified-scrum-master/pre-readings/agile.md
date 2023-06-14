@@ -217,3 +217,9 @@ These help us to look at the same thing from different perspectives
 When you give the teams the freedom to think, multiple perspectives to solve the problems emerge
 In fact, they may bring multiple perspectives of the problem itself
 This enables the teams to provide the best possible solution for that problem 
+
+## 3.12 Agile Principle 12 - At regular intervals, the team reflects on how to become more effective, then tunes and adjusts its behaviour accordingly
+Look at any sports team, as the game goes on, the teams look at the results and change their game strategy accordingly
+e.g. Substitutions, Defense vs Offense, etc.
+When we build products, it's a team game too.
+It calls for the frequent inspection of the way teams work, interact and adapt those ways and means to become more effective
