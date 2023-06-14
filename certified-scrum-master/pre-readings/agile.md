@@ -146,3 +146,11 @@ Going in alignment with principle 1, delivering value for the customer, better f
 In complex product context, you need continuous and frequent feedback from the customers to reduce cost of delay
 In case of products like software, customer is unable to give you the feedback unless and until they see and experience and feel the products,
 hence it makes sense to build the products incrementally and in shorter cycles
+
+## 3.4 Agile Principle 4 - Business people and Developers must work together daily throughout the project
+Let's say you have a group of business people who talk with the end-users and gather requirements. They then document it and send it to the development team
+Developers develop the product based on what they understand from the documents
+Do you think this is effective? Why is it not effective?
+- Possibility that requirements could be misunderstood
+- With each hand-off, there could be potential loss of information 
+In essence, there must be <b>DAILY INTERACTION</b> between the developers and business people to ensure the right practice is effectively built to solve the end-users problems
