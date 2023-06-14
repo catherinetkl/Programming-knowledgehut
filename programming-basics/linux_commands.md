@@ -511,10 +511,10 @@ $ id
    <td>Root</td><td>0</td><td>0</td>
   </tr>
   <tr>
-   <td>System</td><td>1 to 500 or 1 to 999 (Debian-based systems)</td><td></td>
+   <td>System, services<br> & other special accounts</td><td>1 to 500 or<br> 1 to 999 (Debian-based systems)</td><td>1 to 999</td>
   </tr>
   <tr>
-   <td>User</td><td>1000</td><td>1</td>
+   <td>User</td><td>1000 and above</td><td>1000 and above</td>
   </tr>
  </tbody>
 </table>
