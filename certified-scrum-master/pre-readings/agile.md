@@ -26,8 +26,18 @@ Based on the complexity of work, different ways are needed to achieve Agility
 
 Choose an appropriate agile framework depending on the kind of work that you do
 
-## 1.2 Agile Manifesto AKA Manifesto For Agile Software Development
+## 1.2 Manifesto For Agile Software Development AKA Agile Manifesto
 A written statement towards the beliefs, aims, policies of an organization or a group\
 Set of 4 values and 12 principles agreed upon by a group of people
 
 ### How did it come to existence?
+In early 1990s, there were 20 odd software developers who were unhappy with the way their organization's developed products
+- Started using lightweight methods of developing products
+    - Extreme programming
+    - Scrum
+    - Crystal
+    - Dynamic System Development Method (DSDM)
+
+Later, they worked for other organizations as consultants and helped them succeed with the new ways of working
+
+In 2001, 17 of them met up at Snowbird resort and spent 2 days to jot down their common beliefs and principles
