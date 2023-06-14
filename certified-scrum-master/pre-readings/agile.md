@@ -82,3 +82,26 @@ Hence, FOCUS on anything that <b>helps customer see and feel</b>, helps in share
 Documents needn't be hundreds of pages, could come in various formats
 - prototypes
 - wireframes
+
+## 2.1 Agile Value 3 - Customer Collaboration over Contract Negotiation
+### Scenario
+Customer engages jewellery company to make a customized gift in celebration of his wedding anniversary with his wife, however as the days approaches the client collection date, he notified the customer that something went wrong with the manufacturing at the workshop and they were unable to deliver the correct design of the wedding anniversary gift to the customer 
+
+### What went wrong?
+Just following the prescription that the customer wrote with respect to the specifications of the design and then involve the customer at the end during the time of delivery
+- The jewellery company employee did not engage the customer frequently
+
+### Correct approach
+- Involve the customer frequently (Create a paper sketch of how the jewellery would look like & get feedback on it)
+- Create the ring without the diamonds on it and check with the customer for the size before putting the diamonds on
+- Confirm the message with the customer before actually engraving the message onto the ring
+
+We need contracts for collaboration, but collaboration should take the precedence (driver's seat) to succeed in business
+
+- You need to build a feedback loop with your customers so that you can constantly ensure that your product works for them
+- Focus should be on continuous development
+
+### Essence of this value
+Building products to solve users' problems
+A product that does not help users get some job done is useless
+Collaborating with the customers to understand what adds value to them, helps you to build products that you can actually SELL and maximise your return of investment (ROI)
