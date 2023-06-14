@@ -207,3 +207,13 @@ Making use of Engineering practices helps in building quality products
 Take a look around you, what can be removed but still gets your job done
 Similarly, when we build products, we may end up building things that the customer may not need
 Focus on building those features that are needed
+
+## 3.11 Agile Principle 11 - The best architectures, requirements and designs emerge from self-organizing teams
+When there is a definite cause-and-effect like if you wear shoes without spikes on a snow-clad surface, you will fall
+One person can design a best solution for this problem. We can also use standard operating procedures
+However, when the problems are complex, one person deciding the solution may not work
+Every human on the face of the Earth is unique, coming from different social setups and value systems 
+These help us to look at the same thing from different perspectives
+When you give the teams the freedom to think, multiple perspectives to solve the problems emerge
+In fact, they may bring multiple perspectives of the problem itself
+This enables the teams to provide the best possible solution for that problem 
