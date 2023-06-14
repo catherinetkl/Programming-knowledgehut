@@ -44,11 +44,11 @@ In 2001, 17 of them met up at Snowbird resort and spent 2 days to jot down their
 
 ## 2.1 Agile Values 1: Individual & Interactions over Processes and Tools
 ### Why are processes needed?
-To streamline the way we interact and work together (be it as a team, customer & service provider or even as a family)\
+To streamline the way we interact and work together (be it as a team, customer & service provider or even as a family)
 
-Each time you travelled to a different country, do you do things the same way you do at home?
+Each time you travelled to a different country, do you do things the same way you do at home?\
 NOPE! Learn the mannerisms to ace your interactions with the locals
 
-Processes are very much required for people to interact
+Processes are very much required for people to interact\
 If processes impede that interaction, then we should change the processes to improve the interaction\
 Change the processes based on experience and learning, then processes are fulfilling its value
