@@ -118,7 +118,7 @@ That’s why the Agile Manifesto suggests that a software team should have the a
 
 A dynamic roadmap can change from quarter to quarter, sometimes even month to month, and agile teams are able to keep up with those changes
 
-## 3.1 Agile Principles 1 - Making early value delivery as a top priority for the product development teams by delivering increments of the product continuously
+## 3.1 Agile Principle 1 - Making early value delivery as a top priority for the product development teams by delivering increments of the product continuously
 Organizations make products to make business out of it<br>
 To maximise ROI, need to make more sales<br>
 When do people buy our products?
@@ -129,7 +129,7 @@ When do people buy our products?
 1. Deliver working software that captures the patients information
 2. While you continue to work on developing other features like capturing the diagnostic reports, doctor's notes, etc (Work in progress - WIP)
 
-## 3.2 Agile Principles 2 - Welcome changing requirements, even if they are late in development. Agile Processes harness change for the customer's competitive advantage
+## 3.2 Agile Principle 2 - Welcome changing requirements, even if they are late in development. Agile Processes harness change for the customer's competitive advantage
 Referring back to Patient management system, doctors when they see their own notes/memo, they have the issue of not having enough time to key in the notes
 Given that they only spend 15-20 minutes per patient, the request for voice notes to Alexa and prescriptions cannot.
 
@@ -140,3 +140,9 @@ Given that they only spend 15-20 minutes per patient, the request for voice note
    
 When the products fall in complex contests, you may not be very clear of the customer's needs and the needs emerge each time you deliver a piece of work<br>
 Using iterative delivery to competitve advantage by building the product that's current with the market needs
+
+## 3.3 Agile Principle 3 - Deliver working software frequently, from a couple of weeks to a couple of months, with a preference to the shorter timescale
+Going in alignment with principle 1, delivering value for the customer, better for both customer and business
+In complex product context, you need continuous and frequent feedback from the customers to reduce cost of delay
+In case of products like software, customer is unable to give you the feedback unless and until they see and experience and feel the products,
+hence it makes sense to build the products incrementally and in shorter cycles
