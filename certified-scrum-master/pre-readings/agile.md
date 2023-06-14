@@ -105,3 +105,14 @@ We need contracts for collaboration, but collaboration should take the precedenc
 Building products to solve users' problems
 A product that does not help users get some job done is useless
 Collaborating with the customers to understand what adds value to them, helps you to build products that you can actually SELL and maximise your return of investment (ROI)
+
+## 2.1 Agile Value 4 - Responding to Change over following a plangm
+Achieving the goal is more important than following a specific plan, but that doesn't mean plan is not required\
+We need to continuously evolve our plans to achieve the goal
+
+The trouble with static roadmaps is that we don’t live in a static world\ 
+Needs and requirements are always shifting, and priorities are always changing\
+That static roadmap will soon grow outdated
+
+That’s why the Agile Manifesto suggests that a software team should have the ability to pivot and change direction whenever they need to, with a flexible roadmap that reflects that\ 
+A dynamic roadmap can change from quarter to quarter, sometimes even month to month, and agile teams are able to keep up with those changes
