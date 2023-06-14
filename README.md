@@ -11,7 +11,8 @@
 📦 Programming_knowledge_hut\
 ├─ readme.md\
 ├─ Certified-Scrum-Master\
-│  └─ agile.md :seedling:\
+│  └─ agile.md :bee:\
+│  └─ scrum.md :potted_plant:\
 ├─ Databases\
 │  └─ sql.md :seedling:\
 ├─ Programming-basics\
