@@ -17,3 +17,22 @@ But you can't change the shape and size of your rooms
 That's method for you
 
 Framework is like React JS and method is like an application like LinkedIn
+
+## 3 roles in Scrum forming the Scrum Team
+- Product Owner (1 person -- e.g. CEO of the product, represent the business and users to the Scrum Team)
+  - responsible for maximizing the value of the product 
+- Development team (consisting of 3-9 developers)
+  - anyone who contributes to the development of product (Programmer, Test Engineer, Build & Release Engineer, Technical Architect, Technical Writer)
+  - turning the needs of the users to a solution that fulfills their needs 
+- Scrum Master (1 person)
+  - A systems coach, responsible for maximizing the effectiveness of the scrum team by helping them improve their systems
+    - processes and tools they use 
+    - the way teams are structured
+    - how they interact with their interdependencies
+    - organizational policies
+
+## Scrum Framework
+- 3 Artifacts
+- 5 Events
+- 5 Values
+- A set of rules
