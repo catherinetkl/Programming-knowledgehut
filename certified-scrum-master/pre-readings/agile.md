@@ -110,7 +110,7 @@ Collaborating with the customers to understand what adds value to them, helps yo
 Achieving the goal is more important than following a specific plan, but that doesn't mean plan is not required\
 We need to continuously evolve our plans to achieve the goal
 
-The trouble with static roadmaps is that we don’t live in a static world\ 
+The trouble with static roadmaps is that we don’t live in a static world<br> 
 Needs and requirements are always shifting, and priorities are always changing<br>
 That static roadmap will soon grow outdated
 
