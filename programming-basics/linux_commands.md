@@ -580,12 +580,13 @@ $ su -
 Password: *******
 #
 ```
-<br>
+
 ``` bash
 # Once logged in, prompt changes from $ to #
 #
 ```
 <br>
+
 Note: If you su -root, you become root, but you're using normal user's environment and variables.
 ``` bash
 # Give you normal user's default shell
