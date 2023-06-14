@@ -154,3 +154,14 @@ Do you think this is effective? Why is it not effective?
 - Possibility that requirements could be misunderstood
 - With each hand-off, there could be potential loss of information<br>
 In essence, there must be <b>DAILY INTERACTION</b> between the developers and business people to ensure the right practice is effectively built to solve the end-users problems
+
+## 3.5 Agile Principle 5 - Build products/projects around motivated individuals(teams), give them the environment (create a system) and support they need, and trust them to get the job done
+When you pay enough to people not to think of money, what motivates them are <b>3 things</b>
+1. Autonomy (the desire to be self-directed)
+2. Mastery (the desire to excel at their craft)
+3. Purpose (the desire to relate to something)
+
+## 3.6 Agile Principle 6 - The most efficient and effective method of conveying(exchanging) information to and within a development team is through face-to-face conversations
+We all come from different <b>cultural & linguistics backgrounds</b> 
+These could potentially be barriers for communication
+When it comes to building complex products like software, the information that is exchanged is complex too
