@@ -114,5 +114,6 @@ The trouble with static roadmaps is that we don’t live in a static world\
 Needs and requirements are always shifting, and priorities are always changing\
 That static roadmap will soon grow outdated
 
-That’s why the Agile Manifesto suggests that a software team should have the ability to pivot and change direction whenever they need to, with a flexible roadmap that reflects that\ 
+That’s why the Agile Manifesto suggests that a software team should have the ability to pivot and change direction whenever they need to, with a flexible roadmap that reflects that<br>
+
 A dynamic roadmap can change from quarter to quarter, sometimes even month to month, and agile teams are able to keep up with those changes
