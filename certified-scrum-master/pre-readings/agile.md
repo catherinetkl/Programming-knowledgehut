@@ -165,3 +165,6 @@ When you pay enough to people not to think of money, what motivates them are <b>
 We all come from different <b>cultural & linguistics backgrounds</b> 
 These could potentially be barriers for communication
 When it comes to building complex products like software, the information that is exchanged is complex too
+That doesn't mean sitting together in one place, but if you are sitting in the same building, same floor, but exchanging information using email or phone, THAT IS INEFFICIENT
+Irrespective of whereever that you're sitting at, make it a habit to exchange the information face-to-face
+It could either be being physically present (<b>FACE-TO-FACE</b>) OR over a digital medium like Skype or Zoom, to be both effective and efficient 
