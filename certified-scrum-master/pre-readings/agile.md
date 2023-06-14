@@ -168,3 +168,16 @@ When it comes to building complex products like software, the information that i
 That doesn't mean sitting together in one place, but if you are sitting in the same building, same floor, but exchanging information using email or phone, THAT IS INEFFICIENT
 Irrespective of whereever that you're sitting at, make it a habit to exchange the information face-to-face
 It could either be being physically present (<b>FACE-TO-FACE</b>) OR over a digital medium like Skype or Zoom, to be both effective and efficient 
+
+## 3.7 Agile Principle 7 - Having a working software as the primary measure of progress (to stay focused) 
+Let's say your goal is to stay fit so you head to the gym, what would help you know if you are achieving your goals?
+1. measuring how much time you spend each day in the gym?
+2. measuring how many times you hit the gym in?
+3. measuring your BMI Score?
+
+Outcome trumps output
+You may have many features developed, bugs fixed and checked into development branch, but it may not be solving users' problems
+Velocity, defect density and things like that are OUTPUT METRICS
+However, the number of users using the product, number of users buying the product are in fact OUTCOME METRICS
+A working software is something that the end-users could use, experience, feel and provide feedback
+Measuring the progress in terms of a working software will help you stay focused on delivering outcomes sooner and often
