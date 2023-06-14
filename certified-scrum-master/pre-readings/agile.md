@@ -129,10 +129,13 @@ When do people buy our products?
 1. Deliver working software that captures the patients information
 2. While you continue to work on developing other features like capturing the diagnostic reports, doctor's notes, etc (Work in progress - WIP)
 
-## 3.2 Agile Principles 2 -
+## 3.2 Agile Principles 2 - Welcome changing requirements, even if they are late in development. Agile Processes harness change for the customer's competitive advantage
 Referring back to Patient management system, doctors when they see their own notes/memo, they have the issue of not having enough time to key in the notes
 Given that they only spend 15-20 minutes per patient, the request for voice notes to Alexa and prescriptions cannot.
 What should be done?
 1. Don't accomodate these changes as they are coming too late into the game
 2. Prioritize these features and accomodate that as the features for the upcoming product sprint\
    Unless these features are added, otherwise the product wouldn't be useful to the doctor at all
+   
+When the products fall in complex contests, you may not be very clear of the customer's needs and the needs emerge each time you deliver a piece of work<br>
+Using iterative delivery to competitve advantage by building the product that's current with the market needs
