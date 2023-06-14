@@ -504,7 +504,10 @@ $ find . -maxdepth 1 -type l -ls
 #### 3 types of user accounts 
 i. Root account (most powerful, highest authority, can perform any operation e.g. change pw, kill processes, navigate to any directories on filesystem) \
 ii. System account (used by processes or programs on host e.g mail administration, run simple Apache server)\
-iii. User accounts (real users like you and I, team members, accounts created to retrieve some files on the host, can modify to give them correct configuration)
+iii. User accounts (real users like you and I, team members, to have private workspace, some accounts are 
+
+
+created to retrieve some files on the host, can modify to give them correct configuration)
 
 ### User Account Identifiers
 <div style="width:1399px; height:661px; background-color: #FFFFFF">
@@ -596,6 +599,14 @@ echo $SHELL
 2. Create new user account
 ``` bash
 useradd <username>
+```
+2. Create new user account with home directory if it does not exist (files and directories contained in skeleton directory will be copied to home directory)
+``` bash
+# useradd will create home directory unless CREATE_HOME in /etc/login.defs is set to no
+# -d flag: new user will be created using HOME_DIR as the value for the user's login directory. The default is to append the LOGIN name to BASE_DIR and use that as the login directory name. The directory HOME_DIR does not have to exist but will not be created if it is missing.
+# -s : specifies name of the user's login shell. The default is to leave this field blank, which causes the system to select the default login shell specified by the SHELL variable in /etc/default/useradd, or an empty string by default. This option also sets the SHELL variable in /etc/default/useradd
+useradd -m -d /home/robert -s /bin/bash robert
+# Note: /etc/passwd, /etc/group and /etc/shadow files are updated
 ```
 3. Setting another user's password / Changing password of current user
 ``` bash
