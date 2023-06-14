@@ -1,6 +1,6 @@
 # Agile
 ## 1.1 Definition
-Ability to <b>evolve</b> your products <b>quickly</b> and continuously to fulfill <b>customer needs</b>\
+Ability to <b>evolve</b> your products <b>quickly</b> and continuously to fulfill <b>customer needs</b>
 
 A philosophy (4 values & 12 principles) that encourages organization models where people collaborate towards a common goal\
 
