@@ -523,7 +523,9 @@ created to retrieve some files on the host, can modify to give them correct conf
 - Home directory location
 - Shell
 
-Information are stored in the /etc/passwd file
+Information are stored in the /etc/passwd file\
+GID listed in /etc/passwd file is default group for an account\
+New files belong to a user's default group
 <br>
 1. View information related to your ID (tells you who you currently are) 
 ``` bash
@@ -650,7 +652,9 @@ lastb
 ```
 14. Modify the user -- comment/description
 ``` bash
-# -c comment (new value of user's password file comment field)
+# -c comment (new value of user's password file comment field, typically contains user's full name)
+# GECOS field might be blank, contain a user's full name, or contains the name of some daemon or service account description
+# AKA General Comprehensive Operating System (GCOS) field
 usermod -c "Human Resources Admin" robert
 ```
 ``` bash
