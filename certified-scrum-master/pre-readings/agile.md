@@ -111,7 +111,7 @@ Achieving the goal is more important than following a specific plan, but that do
 We need to continuously evolve our plans to achieve the goal
 
 The trouble with static roadmaps is that we don’t live in a static world\ 
-Needs and requirements are always shifting, and priorities are always changing\
+Needs and requirements are always shifting, and priorities are always changing<br>
 That static roadmap will soon grow outdated
 
 That’s why the Agile Manifesto suggests that a software team should have the ability to pivot and change direction whenever they need to, with a flexible roadmap that reflects that<br>
