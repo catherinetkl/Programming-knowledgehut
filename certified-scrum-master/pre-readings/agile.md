@@ -181,3 +181,10 @@ Velocity, defect density and things like that are OUTPUT METRICS<br>
 However, the number of users using the product, number of users buying the product are in fact OUTCOME METRICS<br>
 A working software is something that the end-users could use, experience, feel and provide feedback<br>
 Measuring the progress in terms of a working software will help you stay focused on delivering outcomes sooner and often
+
+## 3.8 Agile Principle 8 - Agile processes promote sustainable development. Sponsors, developers and users should be able to maintain a constant pace indefinitely
+Agility does not mean going faster<br>
+Agility is the ability to evolve your products and services quickly and continuously to fulfill your customers' needs<br>
+Adapting quickly, doesn't mean delivering faster<br>
+Building processes that help you inspect and adapt at a sustainable pace<br>
+This requires inspection of the ways and means continuously to sustain
