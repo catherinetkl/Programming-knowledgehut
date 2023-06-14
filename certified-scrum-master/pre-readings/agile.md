@@ -176,8 +176,8 @@ Let's say your goal is to stay fit so you head to the gym, what would help you k
 3. measuring your BMI Score?
 
 Outcome trumps output
-You may have many features developed, bugs fixed and checked into development branch, but it may not be solving users' problems
-Velocity, defect density and things like that are OUTPUT METRICS
-However, the number of users using the product, number of users buying the product are in fact OUTCOME METRICS
-A working software is something that the end-users could use, experience, feel and provide feedback
+You may have many features developed, bugs fixed and checked into development branch, but it may not be solving users' problems<br>
+Velocity, defect density and things like that are OUTPUT METRICS<br>
+However, the number of users using the product, number of users buying the product are in fact OUTCOME METRICS<br>
+A working software is something that the end-users could use, experience, feel and provide feedback<br>
 Measuring the progress in terms of a working software will help you stay focused on delivering outcomes sooner and often
