@@ -10,6 +10,8 @@
 
 📦 Programming_knowledge_hut\
 ├─ readme.md\
+├─ Certified-Scrum-Master\
+│  └─ agile.md :seedling:\
 ├─ Databases\
 │  └─ sql.md :seedling:\
 ├─ Programming-basics\
