@@ -53,7 +53,7 @@ Processes are very much required for people to interact\
 If processes impede that interaction, then we should change the processes to improve the interaction\
 Change the processes based on experience and learning, then processes are fulfilling its value
 
-## 2.1 Agile Value 2 - Working Software over Comprehensive Documentation
+## 2.2 Agile Value 2 - Working Software over Comprehensive Documentation
 ### Example 
 Go to fine dining restaurant and order food, waiter writes everything on paper and confirms with you\
 Chef comes to you with the list of all the ingredients they are going to use and tells you the proportions to get you onboard on that\
@@ -83,7 +83,7 @@ Documents needn't be hundreds of pages, could come in various formats
 - prototypes
 - wireframes
 
-## 2.1 Agile Value 3 - Customer Collaboration over Contract Negotiation
+## 2.3 Agile Value 3 - Customer Collaboration over Contract Negotiation
 ### Scenario
 Customer engages jewellery company to make a customized gift in celebration of his wedding anniversary with his wife, however as the days approaches the client collection date, he notified the customer that something went wrong with the manufacturing at the workshop and they were unable to deliver the correct design of the wedding anniversary gift to the customer 
 
@@ -106,7 +106,7 @@ Building products to solve users' problems
 A product that does not help users get some job done is useless
 Collaborating with the customers to understand what adds value to them, helps you to build products that you can actually SELL and maximise your return of investment (ROI)
 
-## 2.1 Agile Value 4 - Responding to Change over following a plangm
+## 2.4 Agile Value 4 - Responding to Change over following a plangm
 Achieving the goal is more important than following a specific plan, but that doesn't mean plan is not required\
 We need to continuously evolve our plans to achieve the goal
 
@@ -117,3 +117,14 @@ That static roadmap will soon grow outdated
 That’s why the Agile Manifesto suggests that a software team should have the ability to pivot and change direction whenever they need to, with a flexible roadmap that reflects that<br>
 
 A dynamic roadmap can change from quarter to quarter, sometimes even month to month, and agile teams are able to keep up with those changes
+
+## 3.1 Agile Principles 1 - Making early value delivery as a top priority for the product development teams by delivering increments of the product continuously
+Organizations make products to make business out of it<br>
+To maximise ROI, need to make more sales<br>
+When do people buy our products?
+- Product solves a problem for the user
+- Helps them get the job done better than the alternatives they use today
+
+### Example: Patient Management System for a hospital
+1. Deliver working software that captures the patients information
+2. While you continue to work on developing other features like capturing the diagnostic reports, doctor's notes, etc (Work in progress - WIP)
