@@ -151,7 +151,7 @@ chmod -R <specifications> dir-name
 <table>
  <thead>
   <tr>
-   <th>Access</th><th>Symbolic Mode</th><th>Octal Mode</th>
+   <th>Access</th><th>Symbolic Mode</th><th>Octal Value</th>
   </tr>
  </thead>
  <tbody>
@@ -170,18 +170,37 @@ chmod -R <specifications> dir-name
 <table>
  <thead>
   <tr>
-   <th>Access</th><th>Symbolic Mode<br>(u+rwx,g+rw,o+r)</th><th>Octal Mode<br> (764 -- user, group, others)</th>
+   <th>Identity</th><th>Symbolic Mode<br>(u+rwx,g+rw,o+r)</th><th>Position<br> (764 -- user, group, others)</th>
   </tr>
  </thead>
  <tbody>
   <tr>
-   <td>User</td><td>u</td><td>main priority</td>
+   <td>User</td><td>u</td><td>First or left-most</td>
   </tr>
   <tr>
-   <td>Group</td><td>g</td><td>middle priority</td>
+   <td>Group</td><td>g</td><td>Middle</td>
   </tr>
   <tr>
-   <td>Others</td><td>o</td><td>least priority</td>
+   <td>Others</td><td>o</td><td>Last or right-most</td>
+  </tr>
+ </tbody>
+</table>
+
+<table>
+ <thead>
+  <tr>
+   <th>Task</th><th>Operator</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Grant a level of access</td><td>+</td>
+  </tr>
+  <tr>
+   <td>Remove a level of access</td><td>-</td>
+  </tr>
+  <tr>
+   <td>Set a level of access</td><td>=</td>
   </tr>
  </tbody>
 </table>
@@ -500,6 +519,8 @@ $ id
 <div style="width:1399px; height:661px; background-color: #FFFFFF">
 <img src="https://devconnected.com/wp-content/uploads/2019/10/id-command.png" title="id output">
 </div>
+<br>
+
 <table>
  <thead>
   <tr>
@@ -518,3 +539,4 @@ $ id
   </tr>
  </tbody>
 </table>
+
