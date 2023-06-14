@@ -19,3 +19,5 @@ Based on the complexity of work, different ways are needed to achieve Agility
 - Scrum
 - Extreme Programming (XP)
 - Kanban
+
+Choose an appropriate agile framework depending on the kind of work that you do
