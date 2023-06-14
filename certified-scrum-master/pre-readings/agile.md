@@ -76,5 +76,5 @@ The waiter places on the table the following:
  - For future reference (a SIDE-EFFECT)
  - To prove to the customer that this is what they said
 
-Abstract products like software are very difficult to imagine and jot down on a piece of paper 
+Abstract products like software are very difficult to imagine and jot down on a piece of paper\ 
 Hence, anything that helps customer see and feel helps in shared understanding and building useful products
