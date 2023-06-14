@@ -132,8 +132,9 @@ When do people buy our products?
 ## 3.2 Agile Principles 2 - Welcome changing requirements, even if they are late in development. Agile Processes harness change for the customer's competitive advantage
 Referring back to Patient management system, doctors when they see their own notes/memo, they have the issue of not having enough time to key in the notes
 Given that they only spend 15-20 minutes per patient, the request for voice notes to Alexa and prescriptions cannot.
-What should be done?
-1. Don't accomodate these changes as they are coming too late into the game
+
+#### What should be done?
+1. Don't accomodate these changes as they are coming too late into the game OR
 2. Prioritize these features and accomodate that as the features for the upcoming product sprint\
    Unless these features are added, otherwise the product wouldn't be useful to the doctor at all
    
