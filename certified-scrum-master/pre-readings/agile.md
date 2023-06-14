@@ -188,3 +188,17 @@ Agility is the ability to evolve your products and services quickly and continuo
 Adapting quickly, doesn't mean delivering faster<br>
 Building processes that help you inspect and adapt at a sustainable pace<br>
 This requires inspection of the ways and means continuously to sustain
+
+## 3.9 Agile Principle 9 - Continuous attention to technical excellence and good design enhances agility
+Having the right mindset is essential for agility, it is not enough
+when we just focus on delivering the needs of the customers & fail to focus on the technical excellence, it results into technical death
+it slows you down further as you add more and more features
+If you keep building features, but don't automate tests or builds, the amount of work that you need to do to integrate every feature with the work that is already done, increases with every feature that you would build
+- Creating a lot of room for human errors
+- Cutting corners due to the time pressure 
+
+Making use of Engineering practices helps in building quality products
+- Test Driven Development
+- Behaviour Driven Development
+- Continuous Integrations
+- Emergent Design
