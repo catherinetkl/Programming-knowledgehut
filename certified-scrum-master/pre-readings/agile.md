@@ -42,7 +42,7 @@ Later, they worked for other organizations as consultants and helped them succee
 
 In 2001, 17 of them met up at Snowbird resort and spent 2 days to jot down their common beliefs and principles
 
-## 2.1 Agile Values 1: Individual & Interactions over Processes and Tools
+## 2.1 Agile Value 1 -- Individual & Interactions over Processes and Tools
 ### Why are processes needed?
 To streamline the way we interact and work together (be it as a team, customer & service provider or even as a family)
 
