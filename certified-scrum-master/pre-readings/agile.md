@@ -2,7 +2,7 @@
 ## 1.1 Definition
 Ability to <b>evolve</b> your products <b>quickly</b> and continuously to fulfill <b>customer needs</b>
 
-A philosophy (4 values & 12 principles) that encourages organization models where people collaborate towards a common goal\
+A philosophy (4 values & 12 principles) that encourages organization models where people collaborate towards a common goal
 
 Create a collaborative, sustainable, self-managing/self-organizing environment (System) where value emerges through interaction between developers and customers and is released early and often
 
