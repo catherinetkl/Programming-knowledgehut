@@ -154,3 +154,35 @@ my_list.append(17)
 ```
 Output:
 > my_list = [11,3,23,7,17]
+
+```python
+# Index 0: 11
+# Index 1: 3
+# Index 2: 23
+# Index 3: 7
+# Index 4: 17
+my_list = [11,3,23,7,17]
+
+# Remove element 17 from my_list
+my_list.pop(17)
+```
+Output:
+> my_list = [11,3,23,7]
+So far the previous examples doesn't require re-indexing, O(n).\
+In this case, n refers to the <b>number of items in the list</b>.
+
+```python
+# Index 0: 11
+# Index 1: 3
+# Index 2: 23
+# Index 3: 7
+my_list = [11,3,23,7]
+
+# Remove element 11 from my_list
+my_list.pop(0)
+```
+Output:
+> my_list = [3,23,7]
+
+Index for elements 3, 23 and 7 are no longer 1,2 and 3 respectively.
+Need to re-index
