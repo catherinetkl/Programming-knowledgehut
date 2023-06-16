@@ -144,6 +144,12 @@ def print_items(a,b):
 ### Lists
 ```python
 # Index 0: 11
+# Index 1: 3
+# Index 2: 23
+# Index 3: 7
 my_list = [11,3,23,7]
+
+# Append element 17 into my_list
+my_list.append(17)
 
 ```
