@@ -90,3 +90,30 @@ The above function printed 110 items
 O(n<sup>2</sup> + n), where n<sup>2</sup> is the dominant term<br>
 n is the non-dominant term, hence we drop it
 - O(n<sup>2</sup>)
+
+### O(1) -- Constant time
+```python
+def add_items(n):
+    return n + n + n
+ ```
+as n gets bigger, number of operations increases\
+in this case, the only operation is addition, n is 1, you have one operation\
+n is 100, you still have one operation
+as n increases, the number of operations still remains constant (not increasing number of operations)\
+Graph of O(1) is a horizontal straight line\
+- Most efficient Big 0, most optimal as you can make it
+
+### O(log n)
+You have a list of integers, 1 to 8 (you have to have sorted data)
+- Objective: find the most efficient way of finding any number in this list
+- Target: 1
+- Take the list, cut into half (1st half: 1 through 4, 2nd half: 5 through 8)
+- Is it in the 1st or 2nd half?
+  - 1st half
+    - Search through 1st half
+      - by splitting the 4 numbers again into 2 halves
+        - Is it in the 1st or 2nd half?
+          - 1st half (locate the number 1)
+Total number of steps: 3
+2<sup>3</sup> = 8
+log<sub>2</sub>8 = 3
