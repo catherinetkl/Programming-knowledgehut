@@ -24,7 +24,7 @@ worst case scenario (denoted by O):
 > if target integer: 7
   - iterate through the entire list to get to 7
 
-### O(n)
+### O(n) -- Proportional
 1. Create a function named, print_items
 2. Pass it a number, n 
 3. Have a <b>for loop</b> that runs for n times
@@ -58,7 +58,7 @@ The above function ran n+n times = 2n\
 O(2n) can be simplified into O(n) by dropping the constant\
 regardless whether is it 2n, 100n 10000n, we can simplify by dropping the constant
 
-### O(n^2)
+### O(n<sup>2</b>)
 ```python
 def print_items(n):
     for i in range(n):
