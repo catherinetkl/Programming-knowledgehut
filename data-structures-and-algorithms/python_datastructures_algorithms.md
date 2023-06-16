@@ -57,3 +57,17 @@ Output is 0 through 9\
 The above function ran n+n times = 2n\
 O(2n) can be simplified into O(n) by dropping the constant\
 regardless whether is it 2n, 100n 10000n, we can simplify by dropping the constant
+
+### O(n^2)
+```python
+def print_items(n):
+    for i in range(n):
+        for j in range(n):
+            print(i,j)
+            
+ print_items(10)
+ ```
+ Output is 0 through 99 (100 items)\
+ The above function ran n*n times = n^2 <br>
+ O(n^2) is much steeper than O(n)
+ - O(n^2) is much less efficient from time complexity standpoint
