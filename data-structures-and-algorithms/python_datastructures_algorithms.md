@@ -70,8 +70,8 @@ def print_items(n):
  Output is 0 through 99 (100 items)\
  The above function ran n*n times = n<sup>2</sup><br>
 
- O(n<sup>2) is much steeper than O(n)
- - O(n<sup>2) is much less efficient from time complexity standpoint
+ O(n<sup>2</sup>) is much steeper than O(n)
+ - O(n<sup>2</sup>) is much less efficient from time complexity standpoint
 
 ### Drop Non-dominants
 ```python
