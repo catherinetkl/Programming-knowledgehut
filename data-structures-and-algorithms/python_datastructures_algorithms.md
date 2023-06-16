@@ -151,5 +151,6 @@ my_list = [11,3,23,7]
 
 # Append element 17 into my_list
 my_list.append(17)
-
 ```
+Output:
+> my_list = [11,3,23,7,17]
