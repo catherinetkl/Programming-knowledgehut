@@ -168,8 +168,8 @@ my_list.pop(17)
 ```
 Output:
 > my_list = [11,3,23,7]
-<br>
-So far the previous examples doesn't require re-indexing, O(n).
+
+So far the previous examples doesn't require re-indexing, O(n).\
 In this case, n refers to the <b>number of items in the list</b>.
 
 ```python
