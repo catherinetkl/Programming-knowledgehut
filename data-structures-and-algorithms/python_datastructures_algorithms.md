@@ -23,3 +23,9 @@ average case scenario (denoted by θ):
 worst case scenario (denoted by O): 
 > if target integer: 7
   - iterate through the entire list to get to 7
+
+### O(n)
+1. Create a function named, print items
+2. Pass it a number, n 
+3. Have a <b>for loop</b> that runs for n times
+4. Print <b>i</b> from <b>for loop</b>
