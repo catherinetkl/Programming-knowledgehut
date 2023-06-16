@@ -43,13 +43,15 @@ O(n) - straight line graph cutting origin diagonally (proportional)
 > y-axis: number of operations
 
 ### Drop constants
-def print_items(n)\
-    for i in range(n):\
-        print(i)\
+```bash
+def print_items(n)
+    for i in range(n):
+        print(i)
         
-    for j in range(n):\
-        print(j)\
-print_items(10)\
+    for j in range(n):
+        print(j)
+print_items(10)
+```
 Output is 0 through 9\
           0 through 9 (20 items)\
 The above function ran n+n times = 2n\
