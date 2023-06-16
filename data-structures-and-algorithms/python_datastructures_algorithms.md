@@ -117,3 +117,8 @@ You have a list of integers, 1 to 8 (you have to have sorted data)
  - Total number of steps: 3\
 2<sup>3</sup> = 8 <br>
 log<sub>2</sub>8 = 3
+log<sub>2</sub>1,073,741,824 = 31\
+Graph of O(log n) is a flat logarithmic curve
+- Quite efficient, but less efficient than O(1)
+O(nlog n) is steeper than O(n), but less steep than O(n<sup>2</sup>)
+Some sorting algorithms, merge sort and quick sort
