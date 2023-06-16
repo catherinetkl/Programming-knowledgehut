@@ -186,4 +186,16 @@ Output:
 > my_list = [3,23,7]
 
 Index for elements 3, 23 and 7 are no longer 1,2 and 3 respectively.
-Need to re-index
+Need to re-index the entire list
+
+```python
+# Index 0: 3
+# Index 1: 23
+# Index 2: 7
+my_list = [3,23,7]
+
+# Insert element 11 into my_list
+my_list.insert(0,11)
+```
+Output:
+> my_list = [11,3,23,7]
