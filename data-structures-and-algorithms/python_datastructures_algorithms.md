@@ -68,6 +68,6 @@ def print_items(n):
  print_items(10)
  ```
  Output is 0 through 99 (100 items)\
- The above function ran n*n times = n^2 <br>
+ The above function ran n*n times = n<sup>2 <br>
  O(n^2) is much steeper than O(n)
  - O(n^2) is much less efficient from time complexity standpoint
