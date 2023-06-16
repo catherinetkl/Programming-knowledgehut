@@ -31,9 +31,27 @@ worst case scenario (denoted by O):
 4. Print <b>i</b> from <b>for loop</b>
 5. Call print_items function again, for 10 times
 
+def print_items(n)
+    for i in range(n):
+        print(i)
+print_items(10)
+
 Output is 0 through 9 (10 items)\
 n - number of operations\
 O(n) - straight line graph cutting origin diagonally (proportional)
 > x-axis: n\
 > y-axis: number of operations
 
+### Drop constants
+def print_items(n)
+    for i in range(n):
+        print(i)
+        
+    for j in range(n):
+        print(j)
+print_items(10)
+Output is 0 through 9\
+          0 through 9 (20 items)\
+The above function ran n+n times = 2n\
+O(2n) can be simplified into O(n) by dropping the constant\
+regardless whether is it 2n, 100n 10000n, we can simplify by dropping the constant
