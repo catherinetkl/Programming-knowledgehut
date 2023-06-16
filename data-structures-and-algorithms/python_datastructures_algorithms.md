@@ -70,5 +70,23 @@ def print_items(n):
  Output is 0 through 99 (100 items)\
  The above function ran n*n times = n<sup>2</sup><br>
 
- O(n^2) is much steeper than O(n)
- - O(n^2) is much less efficient from time complexity standpoint
+ O(n<sup>2) is much steeper than O(n)
+ - O(n<sup>2) is much less efficient from time complexity standpoint
+
+### Drop Non-dominants
+```python
+def print_items(n):
+    for i in range(n):
+        for j in range(n):
+            print(i,j)
+    for k in range(n):
+        print(k)
+ print_items(10)
+ ```
+Output is 0 through 99 (100 items)\
+           0 through 9 (10 items)
+           
+The above function printed 110 items
+O(n<sup>2 + n), where n<sup>2</sup> is the dominant term<br>
+n is the non-dominant term, hence we drop it
+- O(n<sup>2</sup>)
