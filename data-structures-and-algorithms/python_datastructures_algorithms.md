@@ -141,3 +141,9 @@ def print_items(a,b):
         print(i,j)
 ```
 
+### Lists
+```python
+# Index 0: 11
+my_list = [11,3,23,7]
+
+```
