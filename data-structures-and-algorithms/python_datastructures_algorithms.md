@@ -31,8 +31,8 @@ worst case scenario (denoted by O):
 4. Print <b>i</b> from <b>for loop</b>
 5. Call print_items function again, for 10 times
 
-Output is 0 through 9 (10 items)
-n - number of operations
+Output is 0 through 9 (10 items)\
+n - number of operations\
 O(n) - straight line graph cutting origin diagonally (proportional)
 > x-axis: n\
 > y-axis: number of operations
