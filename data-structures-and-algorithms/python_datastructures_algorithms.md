@@ -122,3 +122,22 @@ Graph of O(log n) is a flat logarithmic curve
 - Quite efficient, but less efficient than O(1)
 O(nlog n) is steeper than O(n), but less steep than O(n<sup>2</sup>)
 Some sorting algorithms, merge sort and quick sort
+
+### Different terms for inputs
+```python
+def print_items(a,b):
+    for i in range(a):
+        print(i)
+        
+    for j in range(b):
+        print(j)
+```
+O(a + b)
+
+```python
+def print_items(a,b):
+    for i in range(a):        
+        for j in range(b):
+        print(i,j)
+```
+O(a * b)
