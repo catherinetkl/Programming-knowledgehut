@@ -25,7 +25,10 @@ worst case scenario (denoted by O):
   - iterate through the entire list to get to 7
 
 ### O(n)
-1. Create a function named, print items
+1. Create a function named, print_items
 2. Pass it a number, n 
 3. Have a <b>for loop</b> that runs for n times
 4. Print <b>i</b> from <b>for loop</b>
+5. Call print_items function again, for 10 times
+Output is 0 through 9 (10 items)
+
