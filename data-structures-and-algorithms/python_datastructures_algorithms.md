@@ -58,7 +58,7 @@ The above function ran n+n times = 2n\
 O(2n) can be simplified into O(n) by dropping the constant\
 regardless whether is it 2n, 100n 10000n, we can simplify by dropping the constant
 
-### O(n<sup>2</b>)
+### O(n<sup>2</sup>)
 ```python
 def print_items(n):
     for i in range(n):
