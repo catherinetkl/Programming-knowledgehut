@@ -114,7 +114,7 @@ You have a list of integers, 1 to 8 (you have to have sorted data)
       - by splitting the 4 numbers again into 2 halves
         - Is it in the 1st or 2nd half?
           - 1st half (locate the number 1)
+ - Total number of steps: 3
 <br>
-Total number of steps: 3 <br>
 2<sup>3</sup> = 8 <br>
 log<sub>2</sub>8 = 3
