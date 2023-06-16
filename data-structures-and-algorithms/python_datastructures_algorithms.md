@@ -34,6 +34,6 @@ worst case scenario (denoted by O):
 Output is 0 through 9 (10 items)
 n - number of operations
 O(n) - straight line graph cutting origin diagonally (proportional)
-> x-axis: n
+> x-axis: n\
 > y-axis: number of operations
 
