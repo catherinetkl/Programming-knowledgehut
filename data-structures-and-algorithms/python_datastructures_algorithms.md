@@ -30,12 +30,12 @@ worst case scenario (denoted by O):
 3. Have a <b>for loop</b> that runs for n times
 4. Print <b>i</b> from <b>for loop</b>
 5. Call print_items function again, for 10 times
-
-def print_items(n)\
+```python
+def print_items(n)
     for i in range(n):
         print(i)
 print_items(10)
-
+```
 Output is 0 through 9 (10 items)\
 n - number of operations\
 O(n) - straight line graph cutting origin diagonally (proportional)
@@ -43,7 +43,7 @@ O(n) - straight line graph cutting origin diagonally (proportional)
 > y-axis: number of operations
 
 ### Drop constants
-```bash
+```python
 def print_items(n)
     for i in range(n):
         print(i)
