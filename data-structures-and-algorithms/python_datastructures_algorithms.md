@@ -87,6 +87,6 @@ Output is 0 through 99 (100 items)\
            0 through 9 (10 items)
            
 The above function printed 110 items
-O(n<sup>2 + n), where n<sup>2</sup> is the dominant term<br>
+O(n<sup>2</sup> + n), where n<sup>2</sup> is the dominant term<br>
 n is the non-dominant term, hence we drop it
 - O(n<sup>2</sup>)
