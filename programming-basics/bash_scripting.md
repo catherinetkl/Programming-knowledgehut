@@ -236,3 +236,20 @@ What is an Archive file? <br>
 An Archive file is a file that is composed of one or more files along with metadata. <br>
 Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space.
 
+```bash
+# Sample script 5 Refactored
+#!/bin/bash
+
+echo "Executing script: $0"
+for USER in $@
+do
+  echo "Archiving user: $1"
+  # Lock the account
+  passwd -l $1
+  # Create an archive of the home directory
+  tar cf /archives/${1}.tar.gz /home/${1}
+done
+```
+
+
+
