@@ -251,6 +251,15 @@ do
   tar cf /archives/${1}.tar.gz /home/${1}
 done
 ```
-
-
+```bash
+$ ./archive_user.sh chet joe
+Executing script: ./archive_user.sh
+Archiving user: chet
+passwd: password expiry information changed
+tar: Removing leading `/' from member names
+Archiving user: joe
+passwd: password expiry information changed.
+tar: Removing leading `/' from member names
+$
+```
 
