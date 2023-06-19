@@ -101,3 +101,16 @@ if [ "$a" != "$b" ]
 # e.g 6:  True if arg1 is greater than or equal to arg2
 [ arg1 -ge arg2 ]  
 ```
+
+## Shell Programming Part II
+
+### Making Decisions - The if statement
+```bash
+# Sample format
+if [ condition-is-true]
+then
+  command 1
+  command 2
+  command N
+fi
+```
