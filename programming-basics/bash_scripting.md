@@ -202,6 +202,7 @@ $0: "script.sh"
 $1: "parameter1"
 $2: "parameter2"
 $3: "parameter3"
+$@: list of all positional arguments
 ```
 ```bash
 # Sample script 5: archive_user.sh accepts a parameter to be a username
