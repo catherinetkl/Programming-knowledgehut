@@ -150,3 +150,19 @@ else
    echo "You seem to like the bash or csh shell."
 fi
 ```
+
+### For loop
+```bash
+# Sample script 3
+#!/bin/bash
+for COLOUR in red green blue
+do
+  echo "COLOUR: $COLOUR"
+done
+```
+```bash
+# Output:
+COLOUR: red
+COLOUR: green
+COLOUR: blue
+```
