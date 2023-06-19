@@ -339,10 +339,11 @@ fi
 
 ### Logical ANDs and ORs
 > $$ = AND
-``bash
+```bash
 mkdir /tmp/bak && cp test.txt /tmp/bak/
 ```
 > || = OR
-``bash
+
+```bash
 cp test.txt /tmp/bak/ || cp test.txt /tmp
 ```
