@@ -48,7 +48,8 @@ then
   echo "\$String is null."
 else
   echo "\$String is NOT null."
-fi     # $String is null.
+fi     
+# $String is null.
 ```
 ```bash
 # -n STRING: True if string is not empty
@@ -58,6 +59,7 @@ then
   echo "String \"string1\" is not null."
 else  
   echo "String \"string1\" is null."
-  # Quote strings within test brackets!
-fi                    
+fi 
+ # Quote strings within test brackets!
+ ```
 
