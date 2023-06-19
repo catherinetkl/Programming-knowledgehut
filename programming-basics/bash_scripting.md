@@ -107,10 +107,32 @@ if [ "$a" != "$b" ]
 ### Making Decisions - The if statement
 ```bash
 # Sample format
-if [ condition-is-true]
+if [ condition-is-true ]
 then
   command 1
   command 2
+  command N
+fi
+```
+```bash
+# Sample script 1
+#!/bin/bash
+MY_SHELL="bash"
+
+if [ "$MY_SHELL" = "bash" ]
+then
+   echo "You seem to like the bash shell."
+fi
+```
+```bash
+# if/elif/else
+if [ condition-is-true ]
+then
+  command N
+elif [ condition-is-true ]
+then
+  command N
+else
   command N
 fi
 ```
