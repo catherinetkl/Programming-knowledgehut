@@ -327,4 +327,22 @@ Example above is used to test our network connectivity to google.com <br>
 After ping is executed, we check the exit status <br>
 If the exit status is equal to 0, we echo to the screen that google.com is reachable <br>
 If the exit status is not equal to 0, we echo to the screen that google.com is unreachable <br>
+```bash
+HOST="google.com"
+ping -c 1 $HOST
+RETURN_CODE=$?
 
+if [ "$RETURN_CODE" -ne "0" ]
+then 
+  echo "$HOST unreachable"
+fi
+
+### Logical ANDs and ORs
+> $$ = AND
+``bash
+mkdir /tmp/bak && cp test.txt /tmp/bak/
+```
+> || = OR
+``bash
+cp test.txt /tmp/bak/ || cp test.txt /tmp
+```
