@@ -266,3 +266,24 @@ $
 Read command accepts STDIN
 Syntax:\
      read -p "PROMPT" VARIABLE 
+```bash
+# Sample script 6
+#!/bin/bash
+
+read -p "Enter a username: " USER
+echo "Archiving user: $USER"
+
+# Lock the account
+passwd -l $USER
+
+# Create an archive of the home directory
+tar cf /archives/${USER}.tar.gz /home/${USER}
+```
+```bash
+$ ./archive_user.sh
+Enter a username: mitch
+Archiving user: mitch
+passwd: password expiry information changed.
+tar: Removing leading `/' from member names
+$
+```
