@@ -295,6 +295,7 @@ ${VARIABLE_NAME}
 VARIABLE_NAME=$(command)
 ```
 ### Exit Status/Return Code
+Use exit status to make a decision or perform a different action based on exit status
 Every command returns an exit status, ranging from 0 to 255\
 0 = success\
 Other than 0 = error condition\
@@ -318,5 +319,10 @@ then
 else
   echo "$HOST unreachable"
 fi
-
+```
+Example above is used to test our network connectivity to google.com <br>
+-c for ping command simply instructs ping to just send one packet <br>
+After ping is executed, we check the exit status <br>
+If the exit status is equal to 0, we echo to the screen that google.com is reachable <br>
+If the exit status is not equal to 0, we echo to the screen that google.com is unreachable <br>
 
