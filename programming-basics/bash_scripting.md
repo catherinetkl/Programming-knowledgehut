@@ -348,3 +348,39 @@ mkdir /tmp/bak && cp test.txt /tmp/bak/
 ```bash
 cp test.txt /tmp/bak/ || cp test.txt /tmp
 ```
+### Chaining multiple commands on a single line
+Separate commands with a semicolon to ensure they all get executed
+```bash
+cp test.txt /tmp/bak/ ; cp test.txt /tmp
+```
+```bash
+# Same as:
+cp test.txt /tmp/bak/
+cp test.txt /tmp
+```
+### Exit Command
+Explicitly define return code
+> exit 0
+> exit 1
+> exit 2
+> exit 255
+> etc
+
+If you don't specify a return code with the exit command, the default value is that of the last command executed.<br>
+Whenever exit command is reached, your shell script stops running.
+
+```bash
+#!/bin/bash
+# if ping command succeeds, return code of 0 is received
+# test in the if statement is false, code block will not execute
+# exit 0 line is executed, stops execution of script and returns 0 as exit status
+HOST="google.com"
+ping -c 1 $HOST
+
+if [ "$?" -ne "0" ]
+then 
+  echo "$HOST unreachable"
+  exit 1
+fi
+exit 0
+```
