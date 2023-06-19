@@ -295,8 +295,19 @@ ${VARIABLE_NAME}
 VARIABLE_NAME=$(command)
 ```
 ### Exit Status/Return Code
-Every command returns an exit status, ranging from 0 to 255\
-0 = success\
-Other than 0 = error condition\
-Used for error checking\
+Every command returns an exit status, ranging from 0 to 255 <br>
+0 = success <br>
+Other than 0 = error condition <br>
+Used for error checking<br>
 Use man or info to find meaning of exit status
+```bash
+HOST="google.com"
+# ping – send ICMP ECHO_REQUEST packets to network hosts; -c count Stop after sending (and receiving) count ECHO_RESPONSE packets; If this option is not specified, ping will operate until interrupted. If this option is specified in conjunction with ping sweeps, each sweep will consist of count packets.
+ping -c 1 $HOST
+if [ "$?" -eq "0" ]
+then 
+  echo "$HOST reachable."
+else
+  echo "$HOST unreachable."
+fi
+```
