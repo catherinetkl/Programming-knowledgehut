@@ -2,6 +2,7 @@
 Source: 
 1. https://tldp.org/LDP/abs/html/comparison-ops.html
 2. https://www.shell-tips.com/linux/how-to-format-date-and-time-in-linux-macos-and-bash/#gsc.tab=0
+3. https://www.warp.dev/terminus/linux-wildcards#:~:text=Wildcard%20characters%20in%20Unix%2FLinux,variations%20and%20match%20multiple%20files.
 
 ## Shell Programming Part I
 
@@ -171,6 +172,7 @@ COLOUR: blue
 ```bash
 # Sample script 4: Rename files that ends with .jpg
 #!/bin/bash
+# use of wildcard character *
 PICTURES=$(ls *jpg)
 # %F option is alias for %Y-%m-%d (Bash Date format YYYY-MM-DD
 DATE=$(date +%F)
@@ -191,4 +193,13 @@ Renaming pig.jpg to 2015-03-06-pig.jpg
 $ ls
 2015-03-06-bear.jpg  2015-03-06-man.jpg  2015-03-06-pig.jpg  rename-pics.sh
 $
+```
+### Positional Parameters
+Variables that contains the contents of the command line
+```bash
+$ script.sh parameter1 parameter2 parameter3
+$0: "script.sh"
+$1: "parameter1"
+$2: "parameter2"
+$3: "parameter3"
 ```
