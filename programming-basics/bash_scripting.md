@@ -338,6 +338,7 @@ then
 fi
 
 ### Logical ANDs and ORs
+Can chain together multiple commands with either ANDs or ORs
 > $$ = AND
 ```bash
 mkdir /tmp/bak && cp test.txt /tmp/bak/
