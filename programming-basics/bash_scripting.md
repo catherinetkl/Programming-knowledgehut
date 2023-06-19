@@ -2,7 +2,8 @@
 Source: 
 1. https://tldp.org/LDP/abs/html/comparison-ops.html
 2. https://www.shell-tips.com/linux/how-to-format-date-and-time-in-linux-macos-and-bash/#gsc.tab=0
-3. https://www.warp.dev/terminus/linux-wildcards#:~:text=Wildcard%20characters%20in%20Unix%2FLinux,variations%20and%20match%20multiple%20files.
+3. https://www.warp.dev/terminus/linux-wildcards#:~:text=Wildcard%20characters%20in%20Unix%2FLinux,variations%20and%20match%20multiple%20files
+4. https://www.geeksforgeeks.org/exit-status-child-process-linux/
 
 ## Shell Programming Part I
 
@@ -428,3 +429,11 @@ round-trip min/avg/max/stddev = 9.076/9.076/9.076/0.000 ms
   </tr>
  </tbody>
 </table>
+
+```bash
+[caterpillar ~]$ mkdir /tmp/caterpillar/bak && cp -v /etc/hosts /tmp/caterpillar/bak
+mkdir: cannot create directory '/tmp/jason/bak': No such file or directory
+[caterpillar ~]$ echo $?
+1
+[caterpillar ~]$
+```
