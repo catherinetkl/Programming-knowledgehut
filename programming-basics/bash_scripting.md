@@ -174,7 +174,7 @@ COLOUR: blue
 #!/bin/bash
 # use of wildcard character *
 PICTURES=$(ls *jpg)
-# %F option is alias for %Y-%m-%d (Bash Date format YYYY-MM-DD
+# %F option is alias for %Y-%m-%d (Bash Date format YYYY-MM-DD)
 DATE=$(date +%F)
 
 for PICTURE in $PICTURES
@@ -203,3 +203,35 @@ $1: "parameter1"
 $2: "parameter2"
 $3: "parameter3"
 ```
+```bash
+# Sample script 5: archive_user.sh accepts a parameter to be a username
+#!/bin/bash
+
+echo "Executing script: $0"
+echo "Archiving user: $1"
+
+# Lock the account
+passwd -l $1
+
+# Create an archive of the home directory
+tar cf /archives/${1}.tar.gz /home/${1}
+```
+
+> ‘tar’ stands for tape archive
+> used to create Archive and extract the Archive files
+> tar command in Linux is one of the important command to create compressed or uncompressed Archive files and also maintain and modify them
+> -c : Creates Archive 
+> -x : Extract the archive 
+> -f : creates archive with given filename
+> -t : displays or lists files in archived file 
+> -u : archives and adds to an existing archive file 
+> -v : Displays Verbose Information 
+> -A : Concatenates the archive files 
+> -z : zip, tells tar command that creates tar file using gzip 
+> -j : filter archive tar file using tbzip 
+> -W : Verify a archive file 
+> -r : update or add file or directory in already existed .tar file 
+
+What is an Archive file? 
+An Archive file is a file that is composed of one or more files along with metadata. Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space. 
+
