@@ -17,6 +17,7 @@
 │  └─ sql.md :seedling:\
 ├─ Programming-basics\
 │  └─ linux_commands.md :potted_plant:\
+│  └─ bash_scripting.md :seedling:\
 └─ Version-control-system\
    ├─ git.md :seedling:\
    └─ github.md :seedling:
