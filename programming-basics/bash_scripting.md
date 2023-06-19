@@ -287,3 +287,10 @@ passwd: password expiry information changed.
 tar: Removing leading `/' from member names
 $
 ```
+```bash
+#!/path/to/interpreter
+VARIABLE_NAME="Value"
+$VARIABLE_NAME
+${VARIABLE_NAME}
+VARIABLE_NAME=$(command)
+```
