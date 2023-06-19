@@ -14,25 +14,32 @@ Valid: FIRST3LETTERS="ABC"\
 ```bash
 # Syntax
 [ condition-to-test-for ]
-
+```
+```bash
 # e.g 1. True if file is a directory
 [ -d /etc/passwd ] 
-
+```
+```bash
 # e.g 2. True if file exists
 [ -e /etc/passwd ] 
-
+```
+```bash
 # e.g 3. True if file exists and is a regular file
 [ -f /etc/passwd ] 
-
+```
+```bash
 # e.g 4. True if file is readable by you
 [ -r /etc/passwd ] 
-
+```
+```bash
 # e.g 5. True if file exists and is not empty
 [ -s /etc/passwd ] 
-
+```
+```bash
 # e.g 6. True if file is writable by you
 [ -w /etc/passwd ] 
-
+```
+```bash
 # e.g 7. True if file is executable by you
 [ -x /etc/passwd ] 
 ```
@@ -62,4 +69,7 @@ else
 fi 
  # Quote strings within test brackets!
  ```
-
+```bash
+# e.g 3:  True if the two strings are equal
+if [ "$a" == "$b" ]  
+```
