@@ -311,7 +311,9 @@ Output: 2
 ```bash
 HOST="google.com"
 # ping – send ICMP ECHO_REQUEST packets to network hosts
-# -c count: Stop after sending (and receiving) count ECHO_RESPONSE packets.  If this option is not specified, ping will operate until interrupted.  If this option is specified in conjunction with ping sweeps, each sweep will consist of count packets.
+# -c count: Stop after sending (and receiving) count ECHO_RESPONSE packets
+# If this option is not specified, ping will operate until interrupted
+# If this option is specified in conjunction with ping sweeps, each sweep will consist of count packets.
 ping -c 1 $HOST
 if [ "$?" -eq "0" ]
 then 
