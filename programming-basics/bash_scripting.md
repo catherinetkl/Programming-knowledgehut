@@ -262,4 +262,7 @@ passwd: password expiry information changed.
 tar: Removing leading `/' from member names
 $
 ```
-
+### Accepting User Input (STDIN)
+Read command accepts STDIN
+Syntax:\
+     read -p "PROMPT" VARIABLE 
