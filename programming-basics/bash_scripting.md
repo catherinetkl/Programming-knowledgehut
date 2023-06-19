@@ -220,19 +220,19 @@ tar cf /archives/${1}.tar.gz /home/${1}
 > ‘tar’ stands for tape archive\
 > used to create Archive and extract the Archive files\
 > tar command in Linux is one of the important command to create compressed or uncompressed Archive files and also maintain and modify them\
-> -c : Creates Archive\ 
-> -x : Extract the archive\
-> -f : creates archive with given filename\
-> -t : displays or lists files in archived file\ 
-> -u : archives and adds to an existing archive file\ 
-> -v : Displays Verbose Information\
-> -A : Concatenates the archive files\ 
-> -z : zip, tells tar command that creates tar file using gzip\ 
-> -j : filter archive tar file using tbzip\ 
-> -W : Verify a archive file\ 
-> -r : update or add file or directory in already existed .tar file\ 
+> -c : Creates Archive <br> 
+> -x : Extract the archive <br>
+> -f : creates archive with given filename <br>
+> -t : displays or lists files in archived file <br>
+> -u : archives and adds to an existing archive file <br>
+> -v : Displays Verbose Information <br>
+> -A : Concatenates the archive files <br>
+> -z : zip, tells tar command that creates tar file using gzip <br> 
+> -j : filter archive tar file using tbzip <br>
+> -W : Verify a archive file <br> 
+> -r : update or add file or directory in already existed .tar file <br>
 
-What is an Archive file?\ 
-An Archive file is a file that is composed of one or more files along with metadata.\
-Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space.\ 
+What is an Archive file? <br>
+An Archive file is a file that is composed of one or more files along with metadata. <br>
+Archive files are used to collect multiple data files together into a single file for easier portability and storage, or simply to compress files to use less storage space.
 
