@@ -294,3 +294,9 @@ $VARIABLE_NAME
 ${VARIABLE_NAME}
 VARIABLE_NAME=$(command)
 ```
+### Exit Status/Return Code
+Every command returns an exit status, ranging from 0 to 255\
+0 = success\
+Other than 0 = error condition\
+Used for error checking\
+Use man or info to find meaning of exit status
