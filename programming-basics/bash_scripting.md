@@ -384,3 +384,47 @@ then
 fi
 exit 0
 ```
+
+### Exit Status Demo
+```bash
+$ ping -c 1 google.com
+PING google.com (xx.xxx.xx.xxx): 56 data bytes
+64 bytes from xx.xxx.xxx.xxx: icmp_seq=0 ttl=106 time=9.076 ms
+
+--- google.com ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 9.076/9.076/9.076/0.000 ms
+```
+<table>
+ <thead>
+  <tr>
+   <th>Exit Status</th><th>Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td><td>Catch all for general errors</td>
+  </tr>
+  <tr>
+   <td>2</td><td>Misuse of shell built-ins (according to Bash documentation)</td>
+  </tr>
+  <tr>
+   <td>126</td><td>Command invoked cannot execute</td>
+  </tr>
+  <tr>
+   <td>127</td><td>Command not found</td>
+  </tr>
+  <tr>
+   <td>128</td><td>Invalid argument to exit command</td>
+  </tr>
+  <tr>
+   <td>128+n</td><td>Fatal error signal "n"</td>
+  </tr>
+  <tr>
+   <td>130</td><td>Bash script terminated by Ctrl-C</td>
+  </tr>
+  <tr>
+   <td>255*</td><td>Exit status out of range</td>
+  </tr>
+ </tbody>
+</table>
