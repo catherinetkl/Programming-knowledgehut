@@ -7,8 +7,7 @@ Source: https://tldp.org/LDP/abs/html/comparison-ops.html
 Variable Names contains letters, digits and underscores\
 Valid: FIRST3LETTERS="ABC"\
        FIRST_THREE_LETTERS="ABC"\
-       firstThreeLetters="ABC"
-       
+       firstThreeLetters="ABC"    
 
 ### File Operator Tests
 ```bash
@@ -44,7 +43,6 @@ Valid: FIRST3LETTERS="ABC"\
 [ -x /etc/passwd ] 
 ```
 
-
 ### String Operator Tests
 ```bash
 # e.g 1: -z STRING : True if string is empty
@@ -72,4 +70,34 @@ fi
 ```bash
 # e.g 3:  True if the two strings are equal
 if [ "$a" == "$b" ]  
+```
+```bash
+# e.g. 4: True if the strings are not equal
+if [ "$a" != "$b" ]  
+```
+
+### Arithmetic Operator Tests
+```bash
+# e.g 1:  True if arg1 is equal to arg2
+[ arg1 -eq arg2 ]  
+```
+```bash
+# e.g 2:  True if arg1 is not equal to arg2
+[ arg1 -ne arg2 ]  
+```
+```bash
+# e.g 3:  True if arg1 is less than arg2
+[ arg1 -lt arg2 ]  
+```
+```bash
+# e.g 4:  True if arg1 is less than or equal to arg2
+[ arg1 -le arg2 ]  
+```
+```bash
+# e.g 5:  True if arg1 is greater than arg2
+[ arg1 -gt arg2 ]  
+```
+```bash
+# e.g 6:  True if arg1 is greater than or equal to arg2
+[ arg1 -ge arg2 ]  
 ```
