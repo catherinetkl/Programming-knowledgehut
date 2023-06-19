@@ -1,7 +1,9 @@
 # Bash Scripting and Shell Programming
+Source: 
+1. https://tldp.org/LDP/abs/html/comparison-ops.html
+2. https://www.shell-tips.com/linux/how-to-format-date-and-time-in-linux-macos-and-bash/#gsc.tab=0
 
 ## Shell Programming Part I
-Source: https://tldp.org/LDP/abs/html/comparison-ops.html
 
 ### Valid variable names
 Variable Names contains letters, digits and underscores\
@@ -165,4 +167,28 @@ done
 COLOUR: red
 COLOUR: green
 COLOUR: blue
+```
+```bash
+# Sample script 4: Rename files that ends with .jpg
+#!/bin/bash
+PICTURES=$(ls *jpg)
+# %F option is alias for %Y-%m-%d (Bash Date format YYYY-MM-DD
+DATE=$(date +%F)
+
+for PICTURE in $PICTURES
+do
+  echo "Renaming ${PICTURE} to ${DATE}-${PICTURE}"
+  mv ${PICTURE} ${DATE}-${PICTURE}
+done
+```
+```bash
+$ ls
+bear.jpg  man.jpg  pig.jpg  rename-pics.sh
+$ ./rename-pics.sh
+Renaming bear.jpg to 2015-03-06-bear.jpg
+Renaming man.jpg to 2015-03-06-man.jpg
+Renaming pig.jpg to 2015-03-06-pig.jpg
+$ ls
+2015-03-06-bear.jpg  2015-03-06-man.jpg  2015-03-06-pig.jpg  rename-pics.sh
+$
 ```
