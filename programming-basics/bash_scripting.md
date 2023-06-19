@@ -311,7 +311,9 @@ Output: 2
 ```bash
 HOST="google.com"
 # ping – send ICMP ECHO_REQUEST packets to network hosts
-# -c count: Stop after sending (and receiving) count ECHO_RESPONSE packets.  If this option is not specified, ping will operate until interrupted.  If this option is specified in conjunction with ping sweeps, each sweep will consist of count packets.
+# -c count: -c for ping command simply instructs ping to just send one packet
+# Stop after sending (and receiving) count ECHO_RESPONSE packets.  
+# If this option is not specified, ping will operate until interrupted.  If this option is specified in conjunction with ping sweeps, each sweep will consist of count packets.
 ping -c 1 $HOST
 if [ "$?" -eq "0" ]
 then 
@@ -321,7 +323,6 @@ else
 fi
 ```
 Example above is used to test our network connectivity to google.com <br>
--c for ping command simply instructs ping to just send one packet <br>
 After ping is executed, we check the exit status <br>
 If the exit status is equal to 0, we echo to the screen that google.com is reachable <br>
 If the exit status is not equal to 0, we echo to the screen that google.com is unreachable <br>
