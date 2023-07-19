@@ -15,8 +15,19 @@ public class LinkedList {
 ```
 
 ## What's a Linked List?
-A dynamic data structure where each element(node) is made up of 2 items: data and a reference(pointer), which points to the next node.
-A linked list is a collection of nodes where each node is connected to the next through a pointer.
+A dynamic data structure where each element(node) is made up of 2 items: data and a reference(pointer), which points to the next node.\
+A linked list is a collection of nodes where each node is connected to the next through a pointer.\
+Programmer has to go sequentially through each node until reaching the searched node.\
+Elements can be stored anywhere in the memory.\
+No need to specify length of linked list.\
+An element has to point to the next or previous element.
+
+## What's an Array?
+A data structure comprising of a collection of elements each identified by the array index.\
+Programmer can directly access an item in the array using the index. \
+The elements are stored in contiguous memory locations.\
+Programmer has to specify the size of the array when declaring the array.\
+The elements are independent of each other.\
 
 ## Differences between an array list and a linked list
 1. Linked lists are dynamic in length, whereas array lists are fixed in length.
