@@ -1,4 +1,8 @@
 # Linked List
+source: 
+1. https://nlbsg.udemy.com/course/data-structures-and-algorithms-java/
+2. https://blog.garybricks.com/a-beginners-overview-of-linked-lists-in-python
+
 ```java
 public class LinkedList {
 	public LinkedList(int value) {...}
@@ -9,6 +13,11 @@ public class LinkedList {
 	public Node remove(int index) {...} // remove an item
 }
 ```
+
+## What's a Linked List?
+A dynamic data structure where each element(node) is made up of 2 items: data and a reference(pointer), which points to the next node.
+A linked list is a collection of nodes where each node is connected to the next through a pointer.
+
 ## Differences between an array list and a linked list
 1. Linked lists are dynamic in length, whereas array lists are fixed in length.
 2. There are no indexes for linked lists to go directly to a particular item.
