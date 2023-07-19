@@ -1,4 +1,5 @@
 # Linked List
+```java
 public class LinkedList {
 	public LinkedList(int value) {...}
 	public void append(int value) {...} // append an item to the end of the linked list
@@ -7,7 +8,7 @@ public class LinkedList {
 	public boolean insert(int index, int value) {...} // insert an item somewhere in the middle
 	public Node remove(int index) {...} // remove an item
 }
-
+```
 ## Differences between an array list and a linked list
 1. Linked lists are dynamic in length, whereas array lists are fixed in length.
 2. There are no indexes for linked lists to go directly to a particular item.
