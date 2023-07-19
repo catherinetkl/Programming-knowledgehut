@@ -25,7 +25,8 @@ i) n - number of nodes, adding something to the end means O(1) <br>
 ii) When a node is removed, in order to move tail pointer to point at the new last node, need to set the tail pointer to equal to the third node, which also points to the new last node. This means O(n) - one of the cases where array list is better than linked list<br>
 iii) Adding an item to the head end of the linked list, the new first node have to point to the node with the head pointed to it, then set the pointer on the new first node to be equal to head. Then move the head pointer to point at the new node and that adds the new node into the list. This is also O(1). <br>
 iv) insertion and removal of new node in between the linked list: O(n) <br>
-v) look for something by value or index: O(n) - one of the cases where array list is better than linked list
+v) look for something by value or index: O(n) - one of the cases where array list is better than linked list <br>
+vi) Prepend and Remove first node are better with linked list than array list
 <table>
  <thead>
   <tr>
