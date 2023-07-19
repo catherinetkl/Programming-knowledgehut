@@ -81,3 +81,39 @@ vi) Prepend and Remove first node are better with linked list than array list
   </tr>
  </tbody>
 </table>
+
+## Linked List under the hood
+When we set something equal to a hashmap, the variable is just pointing to the hashmap.
+
+## Linked List Constructor
+```java
+public class LinkedList {
+	public LinkedList(int value) {...}
+	// create new Node
+	public void append(int value) {...}
+	// create new Node
+	// add Node to end
+	public void prepend(int value) {...}
+	// create new Node
+	// add Node to beginning
+	public boolean insert(int index, int value) {...}
+	// create new Node
+	// insert Node somewhere in the middle at a particular index
+}
+```
+```java
+class Node {
+	int value;
+	Node next; // variable of type node, it is a pointer to a node
+
+	Node(int value) {  // constructor - passing the node a value, value here is the same as the rhs assignment of value below.
+		this.value = value; // value from this.value refers to the variable of int data type declared in class Node above
+	}
+}
+```
+```java
+public class LinkedList {
+	private Node head; // type Node means they can point to a node
+	private Node tail;
+	private int length;  // keeping track of the length of the linked list, best practice to make class variables private
+}
