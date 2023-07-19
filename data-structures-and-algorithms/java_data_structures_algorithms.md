@@ -28,7 +28,7 @@ A data structure comprising of a collection of elements each identified by the a
 Programmer can directly access an item in the array using the index. \
 The elements are stored in contiguous memory locations.\
 Programmer has to specify the size of the array when declaring the array.\
-The elements are independent of each other.\
+The elements are independent of each other.
 
 ## Differences between an array list and a linked list
 1. Linked lists are dynamic in length, whereas array lists are fixed in length.
