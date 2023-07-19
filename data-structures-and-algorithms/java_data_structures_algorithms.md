@@ -102,18 +102,41 @@ public class LinkedList {
 }
 ```
 ```java
-class Node {
-	int value;
-	Node next; // variable of type node, it is a pointer to a node
+package datastructures.linkedlist;
 
-	Node(int value) {  // constructor - passing the node a value, value here is the same as the rhs assignment of value below.
-		this.value = value; // value from this.value refers to the variable of int data type declared in class Node above
-	}
-}
-```
-```java
 public class LinkedList {
 	private Node head; // type Node means they can point to a node
 	private Node tail;
 	private int length;  // keeping track of the length of the linked list, best practice to make class variables private
+
+	class Node {   // node class is inside linked list class aka inner/nested class
+		int value;
+		Node next; // variable of type node, it is a pointer to a node
+
+		Node(int value) {  // constructor - passing the node a value, value here is the same as the rhs assignment of value below.
+		this.value = value; // value from this.value refers to the variable of int data type declared in class Node above
+		}
+	}
+	public LinkedList(int value) { // constructor used to create a new linkedlist
+		Node newNode = new Node(value); // step 1: create a node;
+		// RHS of equal sign: new keyword runs the constructor for the node class
+		// LHS of equal sign: a variable called newNode of data type Node, means it can point to a node
+		// equal sign: by setting these equal, we're pointing that variable newNode at the node that we just created
+		head = newNode; // head being type node can point to a node(head is pointing at the same thing that newNode is pointing at)
+		tail = newNode; // tail point to the new node
+		length = 1; // we started the linked list with 1 item, hence length = 1
+	}
 }
+```
+```java
+package datastructures.linkedlist;
+
+public class Main {   // main class 
+
+	public static void main(String[] args) {   // main method is where we run our code inside
+		LinkedList myLinkedList = new LinkedList(4);
+		// variable myLinkedList of type linkedlist, can point to a linkedlist
+		// create the linked list on rhs, new keyword runs the constructor above - public LinkedList
+	}
+}
+```
