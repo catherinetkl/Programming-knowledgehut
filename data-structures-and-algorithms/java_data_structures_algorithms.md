@@ -19,3 +19,43 @@ Last node has a pointer, it just points to null (doesn't point to anything, it d
 <div style="width:1399px; height:661px; background-color: #FFFFFF">
 <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1637603328903/E1PjE0gz9.jpeg?auto=compress,format&format=webp" title="Understanding linked list">
 </div>
+
+## Big O
+i) n - number of nodes, adding something to the end means O(1) <br>
+ii) When a node is removed, in order to move tail pointer to point at the new last node, need to set the tail pointer to equal to the third node, which also points to the new last node. This means O(n). <br>
+iii) Adding an item to the head end of the linked list, the new first node have to point to the node with the head pointed to it, then set the pointer on the new first node to be equal to head. Then move the head pointer to point at the new node and that adds the new node into the list. This is also O(1). <br>
+iv) insertion and removal of new node in between the linked list: O(n) <br>
+v) look for something by value or index: O(n) - one of the cases where array list is better than linked list
+<table>
+ <thead>
+  <tr>
+   <th></th><th>Linked List</th><th>Array List</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Append</td><td>O(1)</td><td>O(1)</td>
+  </tr>
+  <tr>
+   <td>Remove last</td><td>O(n)</td><td>O(1)</td>
+  </tr>
+  <tr>
+   <td>Prepend</td><td>O(1)</td><td>O(n)</td>
+  </tr>
+  <tr>
+   <td>Remove First</td><td>O(1)</td><td>O(n)</td>
+  </tr>
+  <tr>
+   <td>Insert</td><td>O(n)</td><td>O(n)</td>
+  </tr>
+  <tr>
+   <td>Remove</td><td>O(n)</td><td>O(n)</td>
+  </tr>
+  <tr>
+   <td>Lookup by Index</td><td>O(n)</td><td>O(1)</td>
+  </tr>
+  <tr>
+   <td>Lookup by Value</td><td>O(n)</td></td><td>O(n)</td>
+  </tr>
+ </tbody>
+</table>
