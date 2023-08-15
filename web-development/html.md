@@ -11,4 +11,9 @@ The address in the address bar: <strong>U</strong>niform <strong>R</strong>esour
 - Fonts
 
 ### What happens when we typed the URL and hit enter? 
-2 pieces involved here: Client (Browser) and Server
+2 pieces involved here: Client-Server Model
+- Client (Browser) 
+- Server - Computer(s) that host our target wehsite
+
+The client requests a service
+The server provides the service
