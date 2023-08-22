@@ -1,3 +1,8 @@
+/* Write a method called maxNumber. It should take an int array as an argument. 
+It should return an int containing the highest number in the array. 
+Note that numbers in the array could be positive or negative. 
+So in this array: [-7,-4,-9] the highest number would be -4. */
+
 package com.fdmgroup.exercise5_part3;
 
 public class Exercise3point4 {
