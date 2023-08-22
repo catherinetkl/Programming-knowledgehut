@@ -1,5 +1,5 @@
 # Knowledge Hut
-```
+
 ### Status
 - :microbe:  - empty
 - :seedling: - small progress
@@ -7,22 +7,22 @@
 - :bee: - almost done
 - :deciduous_tree: - complete
 - :star: - current focus
+
 ```
-
-📦 knowledge_hut\
-├─ readme.md\
-├─ Certified-Scrum-Master\
-│  └─ agile.md :bee:\
-│  └─ scrum.md :potted_plant:\
-├─ Databases\
-│  └─ sql.md :seedling:\
-├─ Programming-basics\
-│  └─ ood1 :star:\
-│  └─ ood2 :star:\
-├─ Programming-fundamentals\
-│  └─ linux_commands.md :potted_plant:\
-│  └─ bash_scripting.md :seedling:\
+📦 knowledge_hut
+├─ readme.md
+├─ Certified-Scrum-Master
+│  └─ agile.md 🐝
+│  └─ scrum.md 🪴
+├─ Databases
+│  └─ sql.md 🌱
+├─ Programming-basics
+│  └─ ood1 ⭐
+│  └─ ood2 ⭐
+├─ Programming-fundamentals
+│  └─ linux_commands.md 🪴
+│  └─ bash_scripting.md 🌱
 └─ Version-control-system\
-   ├─ git.md :seedling:\
-   └─ github.md :seedling:
-
+   ├─ git.md 🌱
+   └─ github.md 🌱
+```
