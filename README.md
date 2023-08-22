@@ -1,5 +1,5 @@
 # Knowledge Hut
-
+```
 ### Status
 - :microbe:  - empty
 - :seedling: - small progress
@@ -7,6 +7,7 @@
 - :bee: - almost done
 - :deciduous_tree: - complete
 - :star: - current focus
+```
 
 📦 knowledge_hut\
 ├─ readme.md\
@@ -16,6 +17,9 @@
 ├─ Databases\
 │  └─ sql.md :seedling:\
 ├─ Programming-basics\
+│  └─ ood1 :star:\
+│  └─ ood2 :star:\
+├─ Programming-fundamentals\
 │  └─ linux_commands.md :potted_plant:\
 │  └─ bash_scripting.md :seedling:\
 └─ Version-control-system\
