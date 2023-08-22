@@ -1,4 +1,4 @@
-# Programming Knowledge Hut
+# Knowledge Hut
 
 ### Status
 - :microbe:  - empty
@@ -8,7 +8,7 @@
 - :deciduous_tree: - complete
 - :star: - current focus
 
-📦 Programming_knowledge_hut\
+📦 knowledge_hut\
 ├─ readme.md\
 ├─ Certified-Scrum-Master\
 │  └─ agile.md :bee:\
