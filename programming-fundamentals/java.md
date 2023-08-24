@@ -2,11 +2,26 @@
 source: 
 1. https://www.baeldung.com/java-primitive-conversions
 
+## How is a Java Program executed?
+- A java program is written and saved in a java file known as a source code(.java file)
+- Source code is then passed to the compiler where it compiles into byte code.
+  - It cannot be directly executed by the machine.
+  - Byte code must first be translate into machine code first by the Java Virtual Machine(JVM).
+  - Then executed by the machine.
+    
+### What is JVM?
+It is platform specific/independent. It means that every platform has its own java virtual machine.
+
+### How is Java platform independent?
+- It means that the code can be written once, and run anywhere.
+- This is achieved because of Java compiler that converts the source code into byte code.
+
 ## Introduction to Java
 Java is a typed language. \
-There are two distinct type groups:\
+There are two distinct type groups:
 1. primitive data types
 2. abstract data types
+
 ## What is the difference between signed and unsigned variables?
 - Signed variables, such as signed integers will allow you to represent numbers both in the positive and negative ranges.
 - Unsigned variables, such as unsigned integers, will only allow you to represent numbers in the positive.
