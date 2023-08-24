@@ -22,7 +22,7 @@
 ├─ Programming-fundamentals
 │  └─ bash_scripting.md 🌱
 │  └─ linux_commands.md 🪴
-│  └─ java.md ⭐
+│  └─ java.md 🪴 ⭐
 └─ Version-control-system
    ├─ git.md 🌱
    └─ github.md 🌱
