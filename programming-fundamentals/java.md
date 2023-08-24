@@ -3,18 +3,19 @@ source:
 1. https://www.baeldung.com/java-primitive-conversions
 
 ## How is a Java Program executed?
-- A java program is written and saved in a java file known as a source code(.java file)
-- Source code is then passed to the compiler where it compiles into byte code.
+- A java program is written and saved in a java file known as a source code (.java file)
+- Source code is then passed to the compiler, where it is compiled into byte code.
   - It cannot be directly executed by the machine.
-  - Byte code must first be translate into machine code first by the Java Virtual Machine(JVM).
+  - Byte code must first be translated into machine code by the Java Virtual Machine (JVM).
   - Then executed by the machine.
     
 ### What is JVM?
-It is platform specific/independent. It means that every platform has its own java virtual machine.
+It is platform specific/independent. It means that every platform has its own Java virtual machine.
 
 ### How is Java platform independent?
-- It means that the code can be written once, and run anywhere.
-- This is achieved because of Java compiler that converts the source code into byte code.
+- It means that the code can be written once and run anywhere.
+- This is achieved because of Java compiler, which converts the source code into byte code.
+  - For example, if the program is written and compiled on a windows platform, the program's byte code is first 
 
 ## Introduction to Java
 Java is a typed language. \
