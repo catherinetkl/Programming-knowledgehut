@@ -22,7 +22,7 @@ git push -uf origin main
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://git.fdmgroup.com/catherine.tiong/hangman/-/settings/integrations)
+- [ ] [Set up project integrations]
 
 ## Collaborate with your team
 
