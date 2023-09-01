@@ -2,7 +2,8 @@
 Source: 
 1. https://tldp.org/LDP/abs/html/comparison-ops.html
 2. https://www.shell-tips.com/linux/how-to-format-date-and-time-in-linux-macos-and-bash/#gsc.tab=0
-3. https://www.warp.dev/terminus/linux-wildcards#:~:text=Wildcard%20characters%20in%20Unix%2FLinux,variations%20and%20match%20multiple%20files.
+3. https://www.warp.dev/terminus/linux-wildcards#:~:text=Wildcard%20characters%20in%20Unix%2FLinux,variations%20and%20match%20multiple%20files
+4. https://www.geeksforgeeks.org/exit-status-child-process-linux/
 
 ## Shell Programming Part I
 
@@ -295,6 +296,7 @@ ${VARIABLE_NAME}
 VARIABLE_NAME=$(command)
 ```
 ### Exit Status/Return Code
+<<<<<<< HEAD:programming-basics/bash_scripting.md
 Every command returns an exit status, ranging from 0 to 255 <br>
 0 = success <br>
 Other than 0 = error condition <br>
@@ -311,3 +313,146 @@ else
   echo "$HOST unreachable."
 fi
 ```
+=======
+Use exit status to make a decision or perform a different action based on exit status
+Every command returns an exit status, ranging from 0 to 255\
+0 = success\
+Other than 0 = error condition\
+Used for error checking\
+Use man or info to find meaning of exit status\
+$? contains return code of previously executed command\
+```bash
+ls /not/here
+echo "$?"
+Output: 2
+# Non-zero exit codes indicate error
+```
+```bash
+HOST="google.com"
+# ping – send ICMP ECHO_REQUEST packets to network hosts
+# -c count: -c for ping command simply instructs ping to just send one packet
+# Stop after sending (and receiving) count ECHO_RESPONSE packets.  
+# If this option is not specified, ping will operate until interrupted.  
+# If this option is specified in conjunction with ping sweeps, each sweep will consist of count packets.
+ping -c 1 $HOST
+if [ "$?" -eq "0" ]
+then 
+  echo "$HOST reachable"
+else
+  echo "$HOST unreachable"
+fi
+```
+Example above is used to test our network connectivity to google.com <br>
+After ping is executed, we check the exit status <br>
+If the exit status is equal to 0, we echo to the screen that google.com is reachable <br>
+If the exit status is not equal to 0, we echo to the screen that google.com is unreachable <br>
+```bash
+HOST="google.com"
+ping -c 1 $HOST
+RETURN_CODE=$?
+
+if [ "$RETURN_CODE" -ne "0" ]
+then 
+  echo "$HOST unreachable"
+fi
+
+### Logical ANDs and ORs
+Can chain together multiple commands with either ANDs or ORs
+> $$ = AND
+```bash
+mkdir /tmp/bak && cp test.txt /tmp/bak/
+```
+> || = OR
+
+```bash
+cp test.txt /tmp/bak/ || cp test.txt /tmp
+```
+### Chaining multiple commands on a single line
+Separate commands with a semicolon to ensure they all get executed
+```bash
+cp test.txt /tmp/bak/ ; cp test.txt /tmp
+```
+```bash
+# Same as:
+cp test.txt /tmp/bak/
+cp test.txt /tmp
+```
+### Exit Command
+Explicitly define return code
+> exit 0
+> exit 1
+> exit 2
+> exit 255
+> etc
+
+If you don't specify a return code with the exit command, the default value is that of the last command executed.<br>
+Whenever exit command is reached, your shell script stops running.
+
+```bash
+#!/bin/bash
+# if ping command succeeds, return code of 0 is received
+# test in the if statement is false, code block will not execute
+# exit 0 line is executed, stops execution of script and returns 0 as exit status
+HOST="google.com"
+ping -c 1 $HOST
+
+if [ "$?" -ne "0" ]
+then 
+  echo "$HOST unreachable"
+  exit 1
+fi
+exit 0
+```
+
+### Exit Status Demo
+```bash
+$ ping -c 1 google.com
+PING google.com (xx.xxx.xx.xxx): 56 data bytes
+64 bytes from xx.xxx.xxx.xxx: icmp_seq=0 ttl=106 time=9.076 ms
+
+--- google.com ping statistics ---
+1 packets transmitted, 1 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 9.076/9.076/9.076/0.000 ms
+```
+<table>
+ <thead>
+  <tr>
+   <th>Exit Status</th><th>Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>1</td><td>Catch all for general errors</td>
+  </tr>
+  <tr>
+   <td>2</td><td>Misuse of shell built-ins (according to Bash documentation)</td>
+  </tr>
+  <tr>
+   <td>126</td><td>Command invoked cannot execute</td>
+  </tr>
+  <tr>
+   <td>127</td><td>Command not found</td>
+  </tr>
+  <tr>
+   <td>128</td><td>Invalid argument to exit command</td>
+  </tr>
+  <tr>
+   <td>128+n</td><td>Fatal error signal "n"</td>
+  </tr>
+  <tr>
+   <td>130</td><td>Bash script terminated by Ctrl-C</td>
+  </tr>
+  <tr>
+   <td>255*</td><td>Exit status out of range</td>
+  </tr>
+ </tbody>
+</table>
+
+```bash
+[caterpillar ~]$ mkdir /tmp/caterpillar/bak && cp -v /etc/hosts /tmp/caterpillar/bak
+mkdir: cannot create directory '/tmp/jason/bak': No such file or directory
+[caterpillar ~]$ echo $?
+1
+[caterpillar ~]$
+```
+>>>>>>> main:programming-fundamentals/bash_scripting.md

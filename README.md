@@ -1,4 +1,4 @@
-# Programming Knowledge Hut
+# Knowledge Hut
 
 ### Status
 - :microbe:  - empty
@@ -8,16 +8,22 @@
 - :deciduous_tree: - complete
 - :star: - current focus
 
-📦 Programming_knowledge_hut\
-├─ readme.md\
-├─ Certified-Scrum-Master\
-│  └─ agile.md :bee:\
-│  └─ scrum.md :potted_plant:\
-├─ Databases\
-│  └─ sql.md :seedling:\
-├─ Programming-basics\
-│  └─ linux_commands.md :potted_plant:\
-└─ Version-control-system\
-   ├─ git.md :seedling:\
-   └─ github.md :seedling:
-
+```
+📦 knowledge_hut
+├─ readme.md
+├─ Certified-Scrum-Master
+│  └─ agile.md 🐝
+│  └─ scrum.md 🪴
+├─ Databases
+│  └─ sql.md 🌱
+├─ Programming-basics
+│  └─ ood1 ⭐
+│  └─ ood2 ⭐
+├─ Programming-fundamentals
+│  └─ bash_scripting.md 🌱
+│  └─ linux_commands.md 🪴
+│  └─ java.md 🪴 ⭐
+└─ Version-control-system
+   ├─ git.md 🌱
+   └─ github.md 🌱
+```

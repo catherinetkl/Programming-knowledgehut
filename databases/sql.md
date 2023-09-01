@@ -35,4 +35,3 @@ CREATE DATABASE <database name>
 
 # To list available databases
 SHOW DATABASES;
-
