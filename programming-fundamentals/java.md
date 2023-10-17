@@ -35,7 +35,7 @@ There are two distinct type groups:
 <table>
  <thead>
   <tr>
-   <th>Type</th><th>Size</th></th><th>Default Value</th><th>Range</th>
+   <th>Type</th><th>Size</th><th>Default Value</th><th>Range</th>
   </tr>
  </thead>
  <tbody>
@@ -62,6 +62,30 @@ There are two distinct type groups:
   </tr>
   <tr>
    <td>boolean</td><td>-</td><td>false</td><td>true or false</td>
+  </tr>
+ </tbody>
+</table>
+
+## What are generics?
+Two main bugs:
+- Compile Time errors
+- Runtime errors
+
+<table>
+ <thead>
+  <tr>
+   <th>Runtime Errors</th><th>Compile Time Errors</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>More problematic</td><td>Easy to detect them as the application will not compile</td>
+  </tr>
+  <tr>
+   <td>Don't always surface immediately and it may be at a point in the program that is far from the actual cause of the problem</td><td>Compiler's error messages help to figure out what the problem is</td>
+  </tr>
+  <tr>
+    <td>-</td><td>Compile time errors can be fixed easily</td>
   </tr>
  </tbody>
 </table>
