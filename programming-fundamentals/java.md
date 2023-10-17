@@ -40,28 +40,28 @@ There are two distinct type groups:
  </thead>
  <tbody>
   <tr>
-   <td>byte</td><td>-R</td><td></td><td></td>
+   <td>byte</td><td>8</td><td>0</td><td>-128 to 127</td>
   </tr>
   <tr>
-   <td>short</td><td>-R or -r</td><td></td><td></td>
+   <td>short</td><td>16</td><td>0</td><td>-32,768 to 32,767</td>
   </tr>
   <tr>
-   <td></td><td>-R or -r</td><td>-R follows symlinks</td><td></td>
+   <td>int</td><td>32</td><td>0</td><td>-2,147,483,648 to 2,147,483,647</td>
   </tr>
   <tr>
-   <td>find</td><td>NA</td><td>recurses by default</td><td></td>
+   <td>long</td><td>64</td><td>0L</td><td>-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807</td>
   </tr>
   <tr>
-   <td>ls</td><td>-R/td><td></td><td></td>
+   <td>float</td><td>32</td><td>0.0f</td><td>Approximately ±3.40282347E+38F (6-7 significant decimal digits)</td>
   </tr>
   <tr>
-   <td>mkdir</td><td>-p</td><td>p = parent dirs</td><td></td>
+   <td>double</td><td>64</td><td>0.0</td><td>Approximately ±1.7976931348623157E+308 (15 significant decimal digits)</td>
   </tr>
   <tr>
-   <td>rm</td><td>-R or -r</td><td></td><td></td>
+   <td>char</td><td>16</td><td>'\u0000'</td><td>0 to 65,535 (unsigned)</td>
   </tr>
   <tr>
-   <td>zip</td><td>-r</td><td></td><td></td>
+   <td>boolean</td><td>-</td><td>false</td><td>true or false</td>
   </tr>
  </tbody>
 </table>
