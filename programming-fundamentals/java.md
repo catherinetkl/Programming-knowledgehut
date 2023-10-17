@@ -97,3 +97,24 @@ If we use Generics, we can transform most of the runtime errors into compile tim
 - Makes most of the bugs and errors to be detectable at compile time and not at runtime.
 
 We prefer compile time erros to runtime errors.
+
+- Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods
+- We can reuse the same code with different inputs
+Generics in programming languages like Java allow you to create classes, interfaces, and methods that can work with different data types while maintaining type safety. Here's what it means in more detail:
+
+1. Parameterized Types: With generics, you can define classes, interfaces, and methods with one or more type parameters (generics). These type parameters act as placeholders for specific data types that will be provided when the class or method is used. For example, you can create a generic class like `List<T>` or a generic method like `public <T> T process(T input)`.
+
+2. Reusability: Generics enable you to write code that can be reused with different data types without duplicating the code for each type. This promotes code reusability and reduces redundancy. You can create a single generic class or method to handle a wide range of data types.
+
+3. Type Safety: Generics ensure type safety by allowing the compiler to enforce type constraints. This means that the compiler will catch type-related errors at compile-time, preventing runtime errors. It helps prevent data type mismatches and improves code reliability.
+
+4. Flexibility: Generics make your code more flexible and adaptable to different use cases. You can create collections, algorithms, and data structures that work with different data types without modifying the code.
+
+5. Code Optimization: Generics can lead to more efficient code by avoiding unnecessary type casting or boxing/unboxing operations. This can result in improved performance.
+
+For example, you can create a generic List class that can hold elements of any data type. You specify the data type when creating an instance of the List. This allows you to have a List of integers, a List of strings, or a List of custom objects, all with type safety and code reusability.
+
+```java
+List<Integer> integerList = new ArrayList<Integer>();
+List<String> stringList = new ArrayList<String>();
+```
