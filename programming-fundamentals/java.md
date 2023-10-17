@@ -89,3 +89,11 @@ Two main bugs:
   </tr>
  </tbody>
 </table>
+
+If we use Generics, we can transform most of the runtime errors into compile time errors.
+
+### Why do we use Generics?
+- Added stability to your code
+- Makes most of the bugs and errors to be detectable at compile time and not at runtime.
+
+We prefer compile time erros to runtime errors.
