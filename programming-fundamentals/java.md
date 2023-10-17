@@ -96,10 +96,10 @@ If we use Generics, we can transform most of the runtime errors into compile tim
 - Added stability to your code
 - Makes most of the bugs and errors to be detectable at compile time and not at runtime.
 
-We prefer compile time erros to runtime errors.
+We prefer compile time errors to runtime errors.
 
 - Generics enable types (classes and interfaces) to be parameters when defining classes, interfaces and methods
-- We can reuse the same code with different inputs
+
 Generics in programming languages like Java allow you to create classes, interfaces, and methods that can work with different data types while maintaining type safety. Here's what it means in more detail:
 
 1. Parameterized Types: With generics, you can define classes, interfaces, and methods with one or more type parameters (generics). These type parameters act as placeholders for specific data types that will be provided when the class or method is used. For example, you can create a generic class like `List<T>` or a generic method like `public <T> T process(T input)`.
@@ -118,3 +118,15 @@ For example, you can create a generic List class that can hold elements of any d
 List<Integer> integerList = new ArrayList<Integer>();
 List<String> stringList = new ArrayList<String>();
 ```
+
+
+```java
+public void draw(Car car)
+```
+If we have a public void draw method that's waiting for a parameter (in this case, the car parameter is the value), in this case, our application is able to draw on the canvas. But it is highly inefficient and not a good approach if we have to draw other vehicles like bus or bicycle instead of a car, we cannot possibly create multiple draw methods for it.
+
+```java
+public void draw(T t)
+```
+Thus, instead of using values, we can use generic types. We can draw multiple types with a generic method.
+Hence, it's absolutely crucial that generics enable types such as classes and interfaces to be parameters when defining classes, methods and interfaces, so that <b>we can reuse the same code with different inputs</b>.
