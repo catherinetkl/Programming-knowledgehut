@@ -43,3 +43,20 @@ The thread is actually executed in a machine's processor.
 - What this means is all users accessing your application are all accessing the same thread.
 - Whenever they're interacting with the application, the code that is run for each user, will be executed all in the same thread, at the same place, in the computer running the application.
 - What this means is that when one user blocks the single thread with the synchronous code, then all other users have to wait for that execution to finish.
+- It's the responsibility as a developer to avoid this kind of situation by using asynchronous code.
+- The asynchronous file read function does the heavy and time-consuming work in the background, where it basically stays until it is finished reading the file from the data.
+- We can register a callback function to be called once the data is available.
+- In this scenario, all the other users can then perform their tasks (login) in a single thread, one after another, while the file is still being read in the background.
+- Once data is read, our callback function will get called to be executed in a main single thread in order to process the read data.
+- When we use callback functions in our code, that doesn't automatically make it asynchronous.
+- Passing functions around into other functions is quite common in javascript.
+- It only works this way for some functions in the Node API, such as the readfile function and etc.
+
+What is callback hell in Node.JS?
+- Callback hell in Node. js is the situation in which we have complex nested callbacks.
+- In this, each callback takes arguments that have been obtained as a result of previous callbacks.
+- This kind of callback structure leads to lesser code readability and maintainability.
+
+How to escape the callback hell?
+- Use of more advanced tools for handline asynchronous code like ES6 promises, or even better ES8 async/await.
+- These are more elegant ways of dealing with the code itself and writing it.
