@@ -17,8 +17,8 @@
 ├─ Databases
 │  └─ sql.md 🌱
 ├─ Programming-basics
-│  └─ ood1 ⭐
-│  └─ ood2 ⭐
+│  └─ ood1 🌱
+│  └─ ood2 🌱
 ├─ Programming-fundamentals
 │  └─ bash_scripting.md 🌱
 │  └─ linux_commands.md 🪴
