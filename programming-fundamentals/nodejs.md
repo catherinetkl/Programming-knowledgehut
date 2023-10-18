@@ -108,3 +108,101 @@ Will read file!
 The avocado 🥑 is also used as the base for the Mexican dip known as guacamole, 
 as well as a spread on corn tortillas or toast served with spices.
 ```
+
+```javascript
+const fs = require('fs');
+
+/* Non-blocking code execution
+ * Node will start reading the file in the background and as soon as it's ready,
+ * it will start the callback function that we specify here which takes in two arguments, error and actual data
+fs.readfile('./txt/start.txt', 'utf-8', (err, data1) => {
+    fs.readfile(`./txt/${data1}`, 'utf-8', (err, data2) => {
+        console.log(data2);
+        fs.readfile('./txt/append.txt', 'utf-8', (err, data3) => {
+            console.log(data3);
+
+            // what we want to write to the file
+            fs.writefile('./txt/final.txt', `${data2}\n${data3}` 'utf-8', (err) => {
+                console.log('Files have been written! 😀');
+            })
+        });
+    });
+});
+console.log('Will read file!');
+```
+```javascript
+// The output is:
+Will read file!
+The avocado 🥑 is also used as the base for the Mexican dip known as guacamole, 
+as well as a spread on corn tortillas or toast served with spices.
+APPENDIX: Generally, avocados 🥑 are served raw, but some cultivars can be cooked for a short time without become bitter.
+```
+
+```javascript
+// Inside final.txt
+The avocado 🥑 is also used as the base for the Mexican dip known as guacamole, 
+as well as a spread on corn tortillas or toast served with spices.
+APPENDIX: Generally, avocados 🥑 are served raw, but some cultivars can be cooked for a short time without become bitter.
+```
+
+```javascript
+const fs = require("fs");
+const { promisify } = require("util");
+ 
+//Non-blocking, asynchronous way
+const readFileAsync = promisify(fs.readFile);
+const writeFileAsync = promisify(fs.writeFile);
+const readAndWrite = async () => {
+  try {
+    const read = await readFileAsync("./txt/start.txt", "utf-8");
+    const read2 = await readFileAsync(`./txt/${read}.txt`, "utf-8");
+    const read3 = await readFileAsync("./txt/append.txt", "utf-8");
+    console.log("Your file has been written");
+    await writeFileAsync("./txt/final.txt", `${read2}\n${read3}`, "utf-8");
+  } catch (error) {
+    console.log("caught error: ", error);
+  }
+};
+readAndWrite();
+```
+
+Typically, without arrow function, it gets the lexical this keyword from the parent function
+```javascript
+function(err, data1) {
+    this
+}
+```
+1. Global Context: If this function is called globally, this would refer to the global object (e.g., window in a browser or global in Node.js).
+2. Object Method: If this function is called as a method of an object, this would refer to that object.
+3. Event Handler: If this function is used as an event handler, this typically refers to the DOM element that triggered the event.
+4. Constructor Function: If this function is used as a constructor function (i.e., with the new keyword), this would refer to the newly created object.
+5. Explicit Context: You can also explicitly set the value of this using methods like call(), apply(), or bind().
+
+```javascript
+const fs = require('fs');
+
+/* Non-blocking code execution
+ * Node will start reading the file in the background and as soon as it's ready,
+ * it will start the callback function that we specify here which takes in two arguments, error and actual data
+fs.readfile('./txt/starttttt.txt', 'utf-8', (err, data1) => {
+    if (err) return console.log('ERROR! 💥')    
+
+    fs.readfile(`./txt/${data1}`, 'utf-8', (err, data2) => {
+        console.log(data2);
+        fs.readfile('./txt/append.txt', 'utf-8', (err, data3) => {
+            console.log(data3);
+
+            // what we want to write to the file
+            fs.writefile('./txt/final.txt', `${data2}\n${data3}` 'utf-8', (err) => {
+                console.log('Files have been written! 😀');
+            })
+        });
+    });
+});
+console.log('Will read file!');
+```
+```javascript
+// The output is:
+Will read file!
+ERROR! 💥
+```
