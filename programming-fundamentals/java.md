@@ -226,3 +226,86 @@ public class App {
     }
 }
 ```
+```java
+package com.globalsoftwaresupport;
+
+class Store {
+	
+	private Object item;
+
+	private void setItem(Object item){
+		this.item = item;
+	}
+	
+	public Object getItem(){
+		return this.item;
+	}
+}
+
+public class App {
+	public static void main(String[] args) {
+		// Instantiate a new store
+		Store store = new Store();
+
+		// Call the setItem method to store integers
+		store.setItem(45);
+
+		// Call the setItem method to store double or float
+		store.setItem(45.5);
+
+		// get the given item that we set earlier?
+		// getItem is going to return an object, so we cannot just do int item = store.getItem();
+		// Cast the given object into an integer - Type casting
+		Integer item = (Integer) store.getItem();
+		// If we want to set the item as floating point numbers, we need to cast into double or float
+		Double item = (Double) store.getItem();
+
+		// print out the item
+		System.out.println(item);
+	}
+}
+```
+the above example is a demonstration of poor programming design due to type casting.
+
+
+we can create a generic store. But what does it exactly mean?
+```java
+package com.globalsoftwaresupport;
+
+// Define the name of the generic type (can use T, E or V) ; <> - diamond operator
+class Store<T> {
+	
+	private T item;
+
+	private void setItem(T item){
+		this.item = item;
+	}
+	
+	public T getItem(){
+		return this.item;
+	}
+}
+
+public class App {
+	public static void main(String[] args) {
+		// Instantiate a new store - Store is a Raw type
+		// Store store = new Store();
+		// whenever we instantiate the store, we have to notify java that we are going to store strings
+		// convert runtime exceptions to compile time exceptions
+		Store<String> store = new Store<>();
+
+		// if we want to call the setItem method to store double or float, java is returning a compile-time error
+		// store.setItem(45.5);
+		// the method setItem string in the type Store<String> is not applicable for the type double
+		store.setItem("Hello World!");
+
+		// get the given item that we set earlier? can get rid of type casting, just store a given string
+		String item = store.getItem();
+
+		// print out the item
+		System.out.println(item);
+	}
+}
+```
+
+Conclusion: Under the hood, whenever we use generics, Java is going to use the Object super type.
