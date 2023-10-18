@@ -309,3 +309,128 @@ public class App {
 ```
 
 Conclusion: Under the hood, whenever we use generics, Java is going to use the Object super type.
+
+### Using multiple generic types
+```java
+import java.util.ArrayList; // import the ArrayList class
+
+package com.globalsoftwaresupport;
+
+class Store<T> {
+	
+	private T item;
+
+	private void setItem(T item){
+		this.item = item;
+	}
+	
+	public T getItem(){
+		return this.item;
+	}
+}
+
+public class App {
+	public static void main(String[] args) {
+		// Raw type
+		// <> diamond operator
+		Store<String> store = new Store<>();
+
+		// use collections framework related classes such as list interface or array list without generic types
+		// Use raw types for ArrayList
+		ArrayList list = new ArrayList();
+        
+        // Add an integer to the list
+        list.add(23);
+        
+        // Now, add a double to the list (works with raw types)
+        list.add(45.5);
+
+        // Access elements (need to cast to appropriate types)
+        int intValue = (int) list.get(0);
+        double doubleValue = (double) list.get(1);
+        
+        // Print values
+        System.out.println("Integer Value: " + intValue);
+        System.out.println("Double Value: " + doubleValue);
+    }
+}
+```
+
+A better solution would be to use Generics
+
+```java
+import java.util.ArrayList; // import the ArrayList class
+
+package com.globalsoftwaresupport;
+
+class Store<T> {
+	
+	private T item;
+
+	private void setItem(T item){
+		this.item = item;
+	}
+	
+	public T getItem(){
+		return this.item;
+	}
+}
+
+public class App {
+	public static void main(String[] args) {
+		// Raw type
+		// <> diamond operator
+		Store<Integer> store = new Store<>();
+
+        store.setItem(45);
+
+        // we can cast Object into any other object
+        Integer item = store.getItem();
+        
+        // Print values
+        System.out.println("Integer Value: " + item);
+    }
+}
+```
+
+Hash table data structures - store values with associated with a given key
+```java
+package com.globalsoftwaresupport;
+
+class Store<T> {
+	
+	private T item;
+
+	private void setItem(T item){
+		this.item = item;
+	}
+	
+	public T getItem(){
+		return this.item;
+	}
+}
+
+class Hashtable<K,V> {
+	private K key;
+	private V value;
+
+	public hashtable(K key, V value) {
+		this.key = key;
+		this.value = value;
+	}
+
+	@Override
+	public String toString() {
+		return "Hashtable [key=" + key ", value=" + value + "]";
+	}
+}
+
+public class App {
+	public static void main(String[] args) {
+		// Instantiate a hashtable
+		// whenever we instantiate a new generic class, then we have to define the generic types
+		Hashtable<String, Integer> hashTable = new Hashtable<>("Hello", 23);
+		System.out.println(hashTable)
+    }
+}
+```
