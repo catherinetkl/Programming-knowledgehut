@@ -65,3 +65,46 @@ How to escape the callback hell?
 Can Node.js be used as multi-thread?
 - Using advanced feature called worker threads. But typically, for many applications, that's not necessary at all thanks to Node's event loop.
 - Highly fast and efficient with the single thread.
+
+### Reading and writing files asynchronously
+```javascript
+const fs = require('fs');
+
+/* Non-blocking code execution
+ * Node will start reading the file in the background and as soon as it's ready,
+ * it will start the callback function that we specify here which takes in two arguments, error and actual data
+fs.readfile('./txt/start.txt', 'utf-8', (err, data) => {
+    console.log(data);
+});
+console.log('Will read file!');
+```
+- As soon as the readfile function is run, it will start reading this file (./txt/start.txt) in the background without blocking the rest of the code execution.
+
+Which log will display first? 
+```javascript
+Will read file!
+read-this
+```
+- Node.js will start reading the file in the background and will not block the code, and then immediately move on to the next line of code.
+- "Will read file!" will be the first thing that is logged to the terminal
+- When a file is completely read, then the callback function will run, which has access to the error and the data that was read.
+
+```javascript
+const fs = require('fs');
+
+/* Non-blocking code execution
+ * Node will start reading the file in the background and as soon as it's ready,
+ * it will start the callback function that we specify here which takes in two arguments, error and actual data
+fs.readfile('./txt/start.txt', 'utf-8', (err, data1) => {
+    fs.readfile(`./txt/${data1}`, 'utf-8', (err, data2) => {
+        console.log(data2);
+    });
+});
+console.log('Will read file!');
+```
+```javascript
+// The output is:
+Will read file!
+The avocado 🥑 is also used as the base for the Mexican dip known as guacamole, 
+as well as a spread on corn tortillas or toast served with spices.
+```
