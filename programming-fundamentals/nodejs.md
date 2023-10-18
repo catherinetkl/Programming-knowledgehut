@@ -37,7 +37,8 @@ What's the problem with blocking code execution in Node.js?
 Why do we use callback function so many times in Node.js?
 
 ## Asynchronous nature of Node.js: An overview
-- A Node.js process, where our application is running, there's only one single thread.
+- A Node.js process, where our application is running, there's only one single thread (main thread).
+- The other threads act as background threads. API execute as background threads.
 - For each application, there's only one thread. A thread is just like a set of instructions that's run in the computer's CPU. 
 The thread is actually executed in a machine's processor. 
 - What this means is all users accessing your application are all accessing the same thread.
@@ -60,3 +61,7 @@ What is callback hell in Node.JS?
 How to escape the callback hell?
 - Use of more advanced tools for handline asynchronous code like ES6 promises, or even better ES8 async/await.
 - These are more elegant ways of dealing with the code itself and writing it.
+
+Can Node.js be used as multi-thread?
+- Using advanced feature called worker threads. But typically, for many applications, that's not necessary at all thanks to Node's event loop.
+- Highly fast and efficient with the single thread.
