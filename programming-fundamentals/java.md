@@ -717,7 +717,28 @@ public class App {
 Person [age=45, name=Adam]
 Person [age=23, name=Mindy]
 ```
+```java
+/* In the previous lecture we have been talking about bounded type parameters.
+ * Let's construct a method that can add 2 arbitrary Numbers (whether it is an integer, 
+ * a float or a double). */
 
+public class Exercise {
+    
+    // here you have to implement a generic method to add 2 numbers and return the result
+    // name of the method must be add(num1, num2) - with 2 arguments num1 and num2 !!!
+    public <T extends Number> T add(T num1, T num2) {
+        if (num1 instanceof Integer) {
+            return (T) Integer.valueOf(num1.intValue() + num2.intValue());
+        } else if (num1 instanceof Double) {
+            return (T) Double.valueOf(num1.doubleValue() + num2.doubleValue());
+        } else if (num1 instanceof Float) {
+            return (T) Float.valueOf(num1.floatValue() + num2.floatValue());
+        } else {
+            throw new IllegalArgumentException("Unsupported number type");
+        }
+    }
+}
+```
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
 - Logging is the action of keeping the logs.
