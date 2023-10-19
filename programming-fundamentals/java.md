@@ -490,13 +490,13 @@ Some of the commonly used low-level logging libraries in Java include:
  </thead>
  <tbody>
   <tr>
-   <td>Logger</td><td>Logger object is used to log messages for a specific system or application component.</td>
+   <td>Logger</td><td>Logger object is used to log messages for a specific system or application component. Main entity that an application uses to make logging calls to capture log records to the appropriate handler.</td>
   </tr>
   <tr>
-   <td>LogRecord</td><td>Log records are used to pass logging requests between the logging framework and individual log handlers.</td>
+   <td>LogRecord</td><td>Log records (Logging event is an entity) are used to pass logging requests between the logging framework and individual log handlers that are responsible for log shaping.</td>
   </tr>
   <tr>
-   <td>Handler</td><td>Handlers exports Log records objects to a variety of destinations, including memory, output streams, consoles, files and sockets. A variety of handler subclasses exist for this purpose. Additional handlers may be developed by third parties and delivered on top of the core platform.</td>
+   <td>Handler</td><td>Handlers exports Log records objects to a variety of destinations, including memory, output streams, consoles, files and sockets. A variety of handler subclasses exist for this purpose. Additional handlers may be developed by third parties and delivered on top of the core platform. Log object is usually used for a single class or a single component to provide context bound to a specific use case.</td>
   </tr>
   <tr>
    <td>Level</td><td>Level defines a set of standards, lodging levels that can be used to control logging output. Programs can be configured to output logging for some levels while ignoring output for others.</td>
@@ -505,7 +505,33 @@ Some of the commonly used low-level logging libraries in Java include:
    <td>Filter</td><td>Filter provides fine grained control over what gets logged beyond the control provided by log levels. The logging API supports a general purpose filter mechanism that allows application code to attach arbitrary filters to control log and output.</td>
   </tr>
    <tr>
-    <td>Formatter</td><td>Formatter provides support for formatting log record objects. This package includes two formatters: SimpleFormatter and XMLFormatter. For formatting log records in plain text or XML, respectively. As with handlers, additional formatters may be developed by third parties.</td>
+    <td>Formatter</td><td>Formatter provides support for formatting log record objects. This package includes two formatters: SimpleFormatter (Generate all messages as text) and XMLFormatter (Generates XML output for the log messages). For formatting log records in plain text or XML, respectively. As with handlers, additional formatters may be developed by third parties.</td>
+  </tr>
+ </tbody>
+</table>
+
+### Examples of handlers
+<table>
+ <thead>
+  <tr>
+   <th>Handlers</th><th>Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>ConsoleHandler</td><td>A ConsoleHandler records all the log messages to System.err. By default, a Logger is associated with this handler.</td>
+  </tr>
+  <tr>
+   <td>FileHandler</td><td>A FileHandler is used to record all the log messages to a specific file or to a rotating set of files.</td>
+  </tr>
+  <tr>
+   <td>StreamHandler</td><td>A StreamHandler publishes all the log messages to an OutputStream.</td>
+  </tr>
+  <tr>
+   <td>SocketHandler</td><td>The SocketHandler publish the LogRecords to a network stream connection.</td>
+  </tr>
+  <tr>
+   <td>MemoryHandler</td><td> It is used to keep the LogRecords into a memory buffer. If the buffer gets full, the new LogRecords starts overwriting the old LogRecords.</td>
   </tr>
  </tbody>
 </table>
@@ -577,3 +603,98 @@ Some of the commonly used low-level logging libraries in Java include:
   </tr>
  </tbody>
 </table>
+
+
+```java
+package com.itbulls.learnit.onlinestore.core.logging.javalogging;
+
+import java.io.IOException;
+import java.util.logging.ConsoleHandler;
+import java.util.logging.FileHandler;
+import java.util.logging.Formatter;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
+public class MyLogger {
+    static private FileHandler simpleTextFileHandler;
+    static private SimpleFormatter simpleFormatter;
+
+    static private FileHandler htmlFileHandler;
+    static private Formatter htmlFormatter;
+    
+   /*
+		The following lists the Log Levels in descending order:
+
+		SEVERE (highest)
+	
+		WARNING
+	
+		INFO
+	
+		CONFIG
+	
+		FINE
+	
+		FINER
+	
+		FINEST
+	
+		LOGGER.setLevel(Level.INFO);
+		In addition to that you also have the levels OFF and ALL to turn the logging off or to log everything.
+
+============================================================================================================================
+		You can also build your own custom formatter. 
+*/
+
+    static public void setup() throws IOException {
+        Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
+        logger.setLevel(Level.FINE);
+        
+        simpleTextFileHandler = new FileHandler("log-example-simple-text-formatter.txt");
+        htmlFileHandler = new FileHandler("log-example-html-formatter.html");
+        
+        simpleTextFileHandler.setLevel(Level.SEVERE);
+
+        // create a TXT formatter
+        simpleFormatter = new SimpleFormatter();
+        simpleTextFileHandler.setFormatter(simpleFormatter);
+        logger.addHandler(simpleTextFileHandler);
+
+        // create an HTML formatter
+        htmlFormatter = new MyHtmlFormatter();
+        htmlFileHandler.setFormatter(htmlFormatter);
+        logger.addHandler(htmlFileHandler);
+    }
+}
+```
+```java
+package com.itbulls.learnit.onlinestore.core.logging.javalogging;
+
+import java.util.logging.Handler;
+import java.util.logging.LogRecord;
+
+/* custom handler template class contains a skeleton of new custom handler
+ * You can also create your own handler by extending the handler class
+ * (extend abstract handler class and implement 3 abstract methods */
+public class CustomHandlerDemo extends Handler {
+
+	@Override
+	public void publish(LogRecord logRecord) {
+		System.out.println(
+				String.format("Log level: %s, message: %s", 
+						logRecord.getLevel().toString(), logRecord.getMessage()));
+	}
+
+	@Override
+	public void flush() {
+	}
+
+	@Override
+	public void close() throws SecurityException {
+	}
+
+}
+```
