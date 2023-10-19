@@ -436,6 +436,80 @@ public class App {
     }
 }
 ```
+## Generic Methods
+```java
+// GenericMethods.java
+package com.globalsoftwaresupport;
+
+// Create a class Generic Method
+public class GenericMethod {
+	// In this class, it's going to be a void method that's going to showItem
+	// Define a given generic type parameter
+	// we can construct a generic method that's going to wait for a generic item 	
+	// (String, custom object, an integer, floating point number)
+	public <T> void showItem(T item) {
+		// we print out the item and we call the toString method that's going to convert the item to string
+		System.out.println("The item is: " + item.toString());
+	}
+}
+```
+If we saved it, in the App.java		
+```java
+// App.java
+package com.globalsoftwaresupport;
+
+public class App {
+	
+	public static void main(String[] args) {
+		// Instantiate a genericMethod
+		GenericMethod method = new genericMethod();
+		method.showItem("Hello world!");
+	}
+}
+```
+```java
+// Output of App.java
+The item is: Hello world!
+```
+What do we have to do if we want to return a given item?
+- Need to make sure that the return type is not going to be void, but it is going to return the given type itself.
+
+```java
+// GenericMethods.java
+package com.globalsoftwaresupport;
+
+// Create a class Generic Method
+public class GenericMethod {
+	// In this class, it's going to be a void method that's going to showItem
+	// Define a given generic type parameter
+	// we can construct a generic method that's going to wait for a generic item 	
+	// (String, custom object, an integer, floating point number)
+	public <T> T showItem(T item) {
+		// we print out the item and we call the toString method that's going to convert the item to string
+		System.out.println("The item is: " + item.toString());
+		return item;
+	}
+}
+```
+```java
+// App.java
+package com.globalsoftwaresupport;
+
+public class App {
+	
+	public static void main(String[] args) {
+		// Instantiate a genericMethod
+		GenericMethod method = new genericMethod();
+		System.out.println("The item returned is: " + method.showItem(34.5));
+	}
+}
+```
+```java
+// Output of App.java
+The item is: 34.5
+The item returned is: 34.5
+```
+The first line is printed out because System.out.println("The item is: " + item.toString()); is from the showItem method as concerned, then we print out the return value.
 
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
