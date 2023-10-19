@@ -620,8 +620,9 @@ import java.util.logging.SimpleFormatter;
 public class MyLogger {
     static private FileHandler simpleTextFileHandler;
     static private SimpleFormatter simpleFormatter;
-
+    // filehandler for logs in HTML form
     static private FileHandler htmlFileHandler;
+    // variables will be initialized with custom HTML format
     static private Formatter htmlFormatter;
     
    /*
@@ -645,25 +646,47 @@ public class MyLogger {
 		In addition to that you also have the levels OFF and ALL to turn the logging off or to log everything.
 
 ============================================================================================================================
-		You can also build your own custom formatter. 
+		You can also build your own custom formatter.
+		Add multiple handlers to the global logger 
 */
 
     static public void setup() throws IOException {
+        // Configure global logger - intended for all the application
+        // use getLogger method from Logger class and pass it as stream values which is used as a logger identifier
+	// If a logger has already been created with a given name, it is returned, otherwise a new logger is created
         Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
+	// we can set a level to the logger - specift which message levels will be logged by this logger
+	// message levels lower than this value will be discarded
+	// why is it needed? For example, you can configure one logger to write in the file 
+	// all messages including finest or trace level log records and you can use another logger that will print into
+	// the output stream on the log messages with warn error and fatal level
         logger.setLevel(Level.FINE);
-        
+	
+        // initialize our file handlers with our file handler object
+	// one filehandler will store logs in simple text format
         simpleTextFileHandler = new FileHandler("log-example-simple-text-formatter.txt");
-        htmlFileHandler = new FileHandler("log-example-html-formatter.html");
-        
+        // one filehandler will store logs in HTML format
+	htmlFileHandler = new FileHandler("log-example-html-formatter.html");
+
+	// you can limit logs with a specific level by setting level not the the logger, but the handler itself
+	// message levels lower than the one we passed in the setLevel method will be discarded
+	// the intention is to allow developers to churn on voluminous logging, 
+	// but to limit the messages that are sent to a certain handler
         simpleTextFileHandler.setLevel(Level.SEVERE);
 
-        // create a TXT formatter
+        // create a TXT formatter from JDK - this is a class from java.util.logging package
         simpleFormatter = new SimpleFormatter();
+
+	// set format for the file handler
+	// now when log records will be published as a file,
+	// simpleFormatter will format text messages
         simpleTextFileHandler.setFormatter(simpleFormatter);
+
+	// Add file handler for simple text to the logger with the help of addHandler method
         logger.addHandler(simpleTextFileHandler);
 
-        // create an HTML formatter
+        // create an HTML formatter (custom type)
         htmlFormatter = new MyHtmlFormatter();
         htmlFileHandler.setFormatter(htmlFormatter);
         logger.addHandler(htmlFileHandler);
@@ -696,5 +719,136 @@ public class CustomHandlerDemo extends Handler {
 	public void close() throws SecurityException {
 	}
 
+}
+```
+```java
+package com.itbulls.learnit.onlinestore.core.logging.javalogging;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Formatter;
+import java.util.logging.Handler;
+import java.util.logging.Level;
+import java.util.logging.LogRecord;
+
+/* MyHtmlFormatter that extends the abstract Formatter class from the java.util.logging package
+ * This class extends the Formatter class, indicating that it's a custom log formatter.
+ * It will be responsible for formatting log records
+ * this custom formatter formats parts of a log record to a single line */
+public class MyHtmlFormatter extends Formatter {
+	
+    /* implement format method that takes LogRecord as a parameter
+     * this is the only abstract method in the Formatter class
+     * this method is called for every log records
+     * This is the overridden format method, a required method in any class that extends the Formatter class. 
+     * This method takes a LogRecord as a parameter, which contains information about the log event.
+     * Inside this method, a StringBuffer named buf is created to build the formatted log record.
+     * The method starts by opening an HTML table row (<tr>).
+     * It then checks the log level of the LogRecord and colors the log level text in red and 
+     * makes it bold if it's at least Level.WARNING. This is used to highlight warning and error log levels.
+     * It appends the log level, the log record's timestamp, and the formatted log message to the table row.
+     * The method closes the table row.
+     * The formatted log record is returned as a string. */
+	@Override
+    public String format(LogRecord rec) {
+        StringBuffer buf = new StringBuffer(1000);
+        buf.append("<tr>\n");
+
+        // colorize any levels >= WARNING in red
+        if (rec.getLevel().intValue() >= Level.WARNING.intValue()) {
+            buf.append("\t<td style=\"color:red\">");
+            buf.append("<b>");
+            buf.append(rec.getLevel());
+            buf.append("</b>");
+        } else {
+            buf.append("\t<td>");
+            buf.append(rec.getLevel());
+        }
+
+        buf.append("</td>\n");
+        buf.append("\t<td>");
+        buf.append(calcDate(rec.getMillis()));
+        buf.append("</td>\n");
+        buf.append("\t<td>");
+        buf.append(formatMessage(rec));
+        buf.append("</td>\n");
+        buf.append("</tr>\n");
+
+        return buf.toString();
+    }
+
+    // This helper method is used to format the timestamp (in milliseconds) into a human-readable date and time.
+    // It uses a SimpleDateFormat to achieve this.
+    private String calcDate(long millisecs) {
+        SimpleDateFormat date_format = new SimpleDateFormat("MMM dd,yyyy HH:mm");
+        Date resultdate = new Date(millisecs);
+        return date_format.format(resultdate);
+    }
+
+    // we can override getHead method to provide the HTML header for the log output. 
+    // It is called just after the handler is set to use this formatter. 
+    // The HTML header includes a basic table structure and styling.
+    @Override
+    public String getHead(Handler h) {
+        return "<!DOCTYPE html>\n<head>\n<style>\n"
+            + "table { width: 100% }\n"
+            + "th { font:bold 10pt Tahoma; }\n"
+            + "td { font:normal 10pt Tahoma; }\n"
+            + "h1 {font:normal 11pt Tahoma;}\n"
+            + "</style>\n"
+            + "</head>\n"
+            + "<body>\n"
+            + "<h1>" + (new Date()) + "</h1>\n"
+            + "<table border=\"0\" cellpadding=\"5\" cellspacing=\"3\">\n"
+            + "<tr align=\"left\">\n"
+            + "\t<th style=\"width:10%\">Loglevel</th>\n"
+            + "\t<th style=\"width:15%\">Time</th>\n"
+            + "\t<th style=\"width:75%\">Log Message</th>\n"
+            + "</tr>\n";
+      }
+
+    // this method is called just after the handler using this
+    // formatter is closed
+    public String getTail(Handler h) {
+        return "</table>\n</body>\n</html>";
+    }
+}
+```
+```java
+package com.itbulls.learnit.onlinestore.core.logging.javalogging;
+
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+public class LoggerDemo {
+    private final static Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+
+
+    public void doSomethingAndLog() {
+        LOGGER.setLevel(Level.SEVERE);
+        
+        LOGGER.severe("SEVERE Log");
+        LOGGER.warning("WARNING Log");
+        LOGGER.info("Info Log");
+        LOGGER.finest("FINEST Really not important");
+
+        LOGGER.setLevel(Level.INFO);
+        LOGGER.severe("SEVERE Log");
+        LOGGER.warning("WARNING Log");
+        LOGGER.info("Info Log");
+        LOGGER.finest("Finest Really not important");
+    }
+
+    public static void main(String[] args) {
+        LoggerDemo loggerDemo = new LoggerDemo();
+        try {
+            MyLogger.setup();
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Problems with creating the log files");
+        }
+        loggerDemo.doSomethingAndLog();
+    }
 }
 ```
