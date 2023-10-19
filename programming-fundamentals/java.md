@@ -511,6 +511,104 @@ The item returned is: 34.5
 ```
 The first line is printed out because System.out.println("The item is: " + item.toString()); is from the showItem method as concerned, then we print out the return value.
 
+### Generic Methods II: Using multiple parameters
+```java
+// GenericMethods.java
+package com.globalsoftwaresupport;
+
+public class GenericMethod {
+
+	public <T,V> void printItems(T t, V v) {
+		System.out.println(t.toString());
+		System.out.println(v.toString());
+	}
+	public <T> void showItem(T item) {
+		// we print out the item and we call the toString method that's going to convert the item to string
+		System.out.println("The item is: " + item.toString());
+	}
+}
+```
+call that method in App.java
+```java
+// App.java
+package com.globalsoftwaresupport;
+
+public class App {
+	
+	public static void main(String[] args) {
+
+		GenericMethod method = new genericMethod();
+		method.printItems("Adam", 3);
+	}
+}
+```
+```java
+// Output of App.java
+Adam
+3
+```
+
+
+This kind of solutions are crucial when implementing data structures from scratch. \
+As far as hash tables are concerned, we are dealing with key-value pairs.
+
+How to use a one-dimensional array of generic items?
+
+```java
+// GenericMethods.java
+package com.globalsoftwaresupport;
+
+public class GenericMethod {
+
+	public <T,V> void printItems(T t, V v) {
+		System.out.println(t.toString());
+		System.out.println(v.toString());
+	}
+
+	public <T> void showItems(T[] items){
+		for (T item : items)
+			System.out.println(item);
+	}
+	public <T> void showItem(T item) {
+		// we print out the item and we call the toString method that's going to convert the item to string
+		System.out.println("The item is: " + item.toString());
+	}
+}
+```
+```java
+// App.java
+package com.globalsoftwaresupport;
+
+public class App {
+	
+	public static void main(String[] args) {
+
+		GenericMethod method = new genericMethod();
+		
+		// create a one-dimensional array of integers
+		// int[] nums = { 1, 2, 5, 4, 3 }; primitive type representation doesn't work
+		// Integer object representation works
+		Integer[] nums = { 1, 2, 5, 4, 3 };
+		method.showItems(nums);
+
+		String[] names = {"Adam", "Anna", "Daniel", "Kevin", "Michael"};
+		method.showItems(names);
+	}
+}
+```
+```java
+// Output of App.java
+1
+2
+5
+4
+3
+Adam
+Anna
+Daniel
+Kevin
+Michael
+```
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
 - Logging is the action of keeping the logs.
