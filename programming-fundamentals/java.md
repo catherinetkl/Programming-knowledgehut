@@ -548,7 +548,6 @@ Adam
 3
 ```
 
-
 This kind of solutions are crucial when implementing data structures from scratch. \
 As far as hash tables are concerned, we are dealing with key-value pairs.
 
@@ -660,6 +659,62 @@ public class Exercise {
 - For example, a method that operates on numbers such as integers, floating point numbers or doubles might only want to accept instances of the number class or its subclasses. For example, let's assume that we would like to execute some mathematical operation and of course we can do mathematical operations on integers, floats and doubles.
 - We are not able to execute mathematical operations on strings or characters. So this is why sometimes it is crucial to restrict the generic types.
 - And this is exactly why there are bounded type parameters and bounded types allow you to invoke methods defined in the bounds.
+
+```java
+package com.globalsoftwaresupport;
+
+// what happens if we want to instantiate a new person
+class Person implements Comparable<Person> {
+  
+  private int age;
+  private String name;
+
+  public Person(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  // generate the getter method
+  public int getAge() {
+    return age;
+  } 
+
+  // Add the unimplemented compareTo method
+  @Override
+  public int compareTo(Person otherPerson) {
+    return Integer.compare(age, otherPerson.getAge());
+  }
+
+  
+  @Override
+  public String toString() {
+    return "Person [age=" + age + ", name=" + name + "]";
+  }
+  
+}
+public class App {
+  
+  public static <T extends Comparable<T>> T calculateMin(T num1, T num2) {
+
+    // comparable interface has a compareTo method - it means that num1 < num2
+      if (num1.compareTo(num2) < 0) {
+        return num1;
+      return num2;
+
+    } 
+  }
+  
+  public static void main(String[] args) {
+
+    System.out.println(calculateMin(new Person("Adam", 45),new Person("Kevin", 78));
+  }
+}
+```
+
+```java
+// Output of App.java
+Person [age=45, name=Adam]
+```
 
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
