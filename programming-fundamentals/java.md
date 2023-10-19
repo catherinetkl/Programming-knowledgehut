@@ -609,6 +609,58 @@ Daniel
 Kevin
 Michael
 ```
+### Generic methods exercise
+
+```java
+/* Let's implement a generic method that checks 2 parameters share the same value or not!
+ * For example: checkEquality(12, 8) returns false
+ * checkEquality(10.5, 10.5) returns true
+ * checkEquality("Joe", "Joe") returns true */
+
+public class Exercise {
+
+    // implement the checkEquality() method that takes 2 values as input parameters and it returns
+    // a boolean value whether the values are matching or not
+    public <T,V> boolean checkEquality(T value1, V value2) {
+        return value1.equals(value2);
+    }
+    
+    public static void main(String[] args) {
+        Exercise exercise = new Exercise();
+        
+        int int1 = 12;
+        int int2 = 8;
+        boolean intResult = exercise.checkEquality(int1, int2);
+        
+        float float1 = 10.5f;
+        float float2 = 10.5f;
+        boolean floatResult = exercise.checkEquality(float1, float2);
+        
+        String name1 = "Joe";
+        String name2 = "Joe";
+        boolean stringResult = exercise.checkEquality(name1, name2);
+    }
+}
+```
+
+```java
+// solution
+public class Exercise {
+ 
+    public <T> boolean checkEquality(T t1, T t2) {
+        return t1.equals(t2);
+    }
+}
+```
+
+## Bounded Generic Types
+
+### What's the motivation behind bounded Generic types
+- The motivation is that sometimes we want to restrict the types that can be used as type arguments.
+- For example, a method that operates on numbers such as integers, floating point numbers or doubles might only want to accept instances of the number class or its subclasses. For example, let's assume that we would like to execute some mathematical operation and of course we can do mathematical operations on integers, floats and doubles.
+- We are not able to execute mathematical operations on strings or characters. So this is why sometimes it is crucial to restrict the generic types.
+- And this is exactly why there are bounded type parameters and bounded types allow you to invoke methods defined in the bounds.
+
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
 - Logging is the action of keeping the logs.
