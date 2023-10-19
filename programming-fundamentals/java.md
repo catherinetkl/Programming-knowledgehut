@@ -1,7 +1,8 @@
 # Java
 source: 
 1. https://www.baeldung.com/java-primitive-conversions
-2. https://nlbsg.udemy.com/course/software-architecture-learnit/
+2. https://nlbsg.udemy.com/course/introduction-to-generics-in-java
+3. https://nlbsg.udemy.com/course/software-architecture-learnit/
 
 ## How is a Java Program executed?
 - A java program is written and saved in a java file known as a source code (.java file)
@@ -463,20 +464,116 @@ Some of the commonly used low-level logging libraries in Java include:
  </thead>
  <tbody>
   <tr>
-   <td>java.util.logging (java.util.logging package)</td><td>This is the built-in logging framework provided by Java (also known as JUL, or Java Util Logging). It is part of the Java SE platform. You can use the java.util.logging classes to configure and output log messages. While it is a basic option, it may be sufficient for simple logging needs.</td>
+   <td>java.util.logging (java.util.logging package)</td><td>This is the built-in logging framework provided by Java (also known as JUL, or Java Util Logging). It is part of the Java SE platform (Logging package provided with JDK). You can use the java.util.logging classes to configure and output log messages. While it is a basic option, it may be sufficient for simple logging needs.</td>
   </tr>
   <tr>
-   <td>Log4j (Apache Log4j)</td><td>Log4j is a popular, open-source logging framework developed by the Apache Software Foundation. It offers a more sophisticated and flexible logging system, and it is widely used in both small and large-scale Java applications.
-Logback is another open-source logging framework that is designed as a successor to Log4j. It offers various enhancements and performance improvements over Log4j and provides both SLF4J (Simple Logging Facade for Java) and native Logback APIs.</td>
+   <td>Log4j (Apache Log4j)</td><td>Log4j is a popular, open-source logging framework developed by the Apache Software Foundation. It offers a more sophisticated and flexible logging system, and it is widely used in both small and large-scale Java applications. Supports logging to files, output streams and other targets and allows the configuration via config files. Logback is another open-source logging framework that is designed as a successor to Log4j. It offers various enhancements and performance improvements over Log4j and provides both SLF4J (Simple Logging Facade for Java) and native Logback APIs.</td>
   </tr>
   <tr>
    <td>Logback</td><td>Logback is another open-source logging framework that is designed as a successor to Log4j. It offers various enhancements and performance improvements over Log4j and provides both SLF4J (Simple Logging Facade for Java) and native Logback APIs.</td>
   </tr>
   <tr>
-   <td>SLF4J (Simple Logging Facade for Java)</td><td>SLF4J is not a logging framework itself but a facade or API that provides a simple and unified interface to various logging systems, including Log4j, Logback, and java.util.logging. You can use SLF4J to abstract away the underlying logging implementation and switch between different logging frameworks easily.</td>
+   <td>SLF4J (Simple Logging Facade for Java)</td><td>SLF4J is not a logging framework itself but a facade or API that provides a simple and unified interface to various other logging systems/libraries, including Log4j, Logback, and java.util.logging. Allowing developers to plug in their desired implementation and deployment type. You can use SLF4J to abstract away the underlying logging implementation and switch between different logging frameworks easily (supports a lot of connectors).</td>
   </tr>
   <tr>
    <td>Tinylog</td><td>Tinylog is a lightweight, open-source logging framework for Java. It's designed to be simple and efficient while providing basic logging features. It can be a good choice for smaller projects or when you need a minimalistic logging solution.</td>
+  </tr>
+ </tbody>
+</table>
+
+### Key Structure Elements of java.util.logging
+<table>
+ <thead>
+  <tr>
+   <th>Key Elements</th><th>Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Logger</td><td>Logger object is used to log messages for a specific system or application component.</td>
+  </tr>
+  <tr>
+   <td>LogRecord</td><td>Log records are used to pass logging requests between the logging framework and individual log handlers.</td>
+  </tr>
+  <tr>
+   <td>Handler</td><td>Handlers exports Log records objects to a variety of destinations, including memory, output streams, consoles, files and sockets. A variety of handler subclasses exist for this purpose. Additional handlers may be developed by third parties and delivered on top of the core platform.</td>
+  </tr>
+  <tr>
+   <td>Level</td><td>Level defines a set of standards, lodging levels that can be used to control logging output. Programs can be configured to output logging for some levels while ignoring output for others.</td>
+  </tr>
+  <tr>
+   <td>Filter</td><td>Filter provides fine grained control over what gets logged beyond the control provided by log levels. The logging API supports a general purpose filter mechanism that allows application code to attach arbitrary filters to control log and output.</td>
+  </tr>
+   <tr>
+    <td>Formatter</td><td>Formatter provides support for formatting log record objects. This package includes two formatters: SimpleFormatter and XMLFormatter. For formatting log records in plain text or XML, respectively. As with handlers, additional formatters may be developed by third parties.</td>
+  </tr>
+ </tbody>
+</table>
+
+### Concept of log levels(for SLF4J library) present in different loggers
+<table>
+ <thead>
+  <tr>
+   <th>Log Levels</th><th>Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Fatal</td><td>The log level indicating that your application encountered an event that prevents it from working or a crucial part of it from working. A fatal log level is, for example, an inability to connect the database that your system relies on, or an external payment system that is needed to checkout the basket in your ecommerce system.
+   </td>
+  </tr>
+  <tr>
+   <td>Error</td><td>Log level that indicates an issue with a system that prevents certain functionality from working. For example, if you provide logging where social media is one way of logging in to your system, the failure of such a model is an error level log for sure. But taking into account log in feature still works. This is not like fatal error that describes complete inability to log in the fails the difference.</td>
+  </tr>
+  <tr>
+   <td>Warn</td><td>Log level that usually indicates a state of the application that might be problematic or unusual execution is detected. Something may be wrong, but it doesn't mean that the application failed. For example, a message wasn't passed correctly because it was not correct. The code execution is continuing, but we could log that with the warn level to inform us and others that potential problems are happening.</td>
+  </tr>
+  <tr>
+   <td>Info</td><td>The standard level of log information that indicates normal application action. For example, created the user with an ID is an example of a log message on an info level that gives you information about certain processes that finished with a success. In most cases, if you are not looking into how your application performs, you could ignore most, if not all, of the info level logs.</td>
+  </tr>
+  <tr>
+   <td>Debug</td><td>Less granular than trace level, but still more granular than info level and more detailed than you need in your normal everyday use. Debug level should be used for information that can be useful for troubleshooting and is not needed for looking at the everyday application state.</td>
+  </tr>
+   <tr>
+    <td>Trace</td><td>Very fine grained information only used in a rare case where you need the full visibility of what is happening in most cases is a trace level will be very verbose. But you can also expect a lot of information about the application used for annotating the steps in your program that are not relevant in everyday use.</td>
+  </tr>
+ </tbody>
+</table>
+
+### Logging Levels java.util.logging VS SLF4J
+<table>
+ <thead>
+  <tr>
+   <th>java.util.logging</th><th>SLF4J</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Off</td><td>Error</td>
+  </tr>
+  <tr>
+   <td>Severe</td><td>Error</td>
+  </tr>
+  <tr>
+   <td>Warning</td><td>Warn</td>
+  </tr>
+  <tr>
+   <td>Info</td><td>Info</td>
+  </tr>
+  <tr>
+   <td>Config</td><td>Info</td>
+  </tr>
+   <tr>
+    <td>Fine</td><td>Debug</td>
+  </tr>
+   <tr>
+    <td>Finer</td><td>Debug</td>
+  </tr>
+  <tr>
+    <td>Finest</td><td>Trace</td>
+  </tr>  
+  <tr>
+    <td>All</td><td>Trace</td>
   </tr>
  </tbody>
 </table>
