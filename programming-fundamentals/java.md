@@ -707,6 +707,7 @@ public class App {
   public static void main(String[] args) {
 
     System.out.println(calculateMin(new Person("Adam", 45),new Person("Kevin", 78));
+    System.out.println(calculateMin(new Person("Mindy", 23),new Person("Mavis", 46));
   }
 }
 ```
@@ -714,6 +715,7 @@ public class App {
 ```java
 // Output of App.java
 Person [age=45, name=Adam]
+Person [age=23, name=Mindy]
 ```
 
 ## What are Logs & Logging?
