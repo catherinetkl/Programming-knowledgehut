@@ -803,9 +803,16 @@ public class Exercise {
     }
 }
 ```
+```
+Review: 
+Question 1: 
+What is the motivation behind bounded type parameters?
+- We want to restrict the types that can be used a type arguments
 
-
-
+Question 2:
+Bounded types allow you to invoke methods defined in the bounds?
+- True
+```
 
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
