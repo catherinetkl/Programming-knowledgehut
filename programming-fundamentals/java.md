@@ -837,8 +837,112 @@ List<String> list = new ArrayList<>();
 - So whenever we instantiate an array list, like a list in the generic manner, means that we have to define the type. The items we are going to store in the underlying one-dimensional array and then we can define the string with the <> diamond operator.
 - But due to Type inference algorithm, we can use class instantiation without having to specify that the arraylist is going to store strings because the compiler is going to know we are going to use a list interface and it is equals to a new arraylist implementation.
 - Type inference enables us to invoke a generic method as an ordinary Java method without specifying the type
+```java
+import java.util.List;
+
+package com.globalsoftwaresupport;
+
+// going to have a class named Bucket, and it is generic typed,
+// has to be defined outside the App class
+class Bucket <T> {
+	// bucket is going to store generic items
+	private T item;
+
+	// create getter method
+	public <T> getItem() {
+		return this.item;
+	}
+
+	// create setter method
+	public void setItem(T item) {
+		this.item = item;
+	}
+}
+
+public class App {
+	// t parameter and going to get a list of generic buckets, return type void
+	public static <T> void addStore(T t, List<Bucket<T>> list) {
+
+		// Instantiate the bucket
+		Bucket<T> bucket = new Bucket<>();
+		bucket.setItem(t);
+		// add bucket to the list
+		list.add(bucket);
+		// Print out
+		System.out.println(t.toString() + " has been added to the list...");
+	}
+
+	// Main method
+	public static void main(String[] args) {
+
+		List<Bucket<String>> list = new ArrayList<>();
+		App.addStore("Adam", list);
+		// type witness
+		App.<String>addStore("Daniel", list);
+	}
+}
+```
+- Bucket Class:
+	- Bucket is a generic class that can store items of any data type.
+	- It has a private field item of type T to store the item. It has a getter getItem and a setter setItem to get and set the item.
+
+- addStore Method:
+	- This is a generic method that takes two parameters: 
+	- T t: The item to be stored in a Bucket.
+	- List<Bucket<T>> list: A list of buckets that can store items of type T.
+	- Inside the method, a new Bucket is created and initialized with the item t.
+	- The Bucket is then added to the list.
+	- It prints a message to indicate that the item has been added to the list.
+
+- main Method:
+	- It starts by creating an empty ArrayList of Bucket<String> called list.
+	- It calls the addStore method to add two strings, "Adam" and "Daniel", to the list.
+
+- Type Inference:
+	- Java's type inference allows you to omit the type parameters when calling generic methods. In this code, you see an example of type inference when calling App.addStore("Adam", list). 
+	- You don't need to specify the type parameter <String> because the Java compiler can infer it from the arguments.
+
+- Type Witness:
+	- The code also demonstrates the use of a type witness.
+ 	- A type witness is explicitly specifying the type parameter when calling a generic method.
+  	- This can be useful when the compiler cannot infer the type correctly or when you want to be explicit about the types.
+	- In the line App.<String>addStore("Daniel", list);, <String> is a type witness, indicating that the type parameter should be String. This is done explicitly.
+
+- Use Cases:
+	- Type inference and type witnesses are useful when working with generic methods or classes, as they allow you to write more concise and readable code.
+	- Use type inference when the compiler can correctly infer the type from the context.
+	- Use a type witness when you want to be explicit about the types, especially in situations where the compiler might not infer the type correctly.
 
 ```java
+package com.globalsoftwaresupport;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class App {	
+	// Generic method that's going to add generic items to a generic list
+	static <T> List<T> add(List<T> list, T item1, T item2) {
+		list.add(item1);
+		list.add(item2);
+		return list;
+	}
+
+	public static void main(String[] args) {
+
+		// Test whether type inference is working fine or not
+		// since input values in the parameter are integers, 
+		// java is going to know that ArrayList will store integers
+		List<Integer> list1 = add(new ArrayList<>(), 20, 30);
+		System.out.println(list1); // [20, 30]
+
+		List<String> list2 = add(new ArrayList<>(), "Adam", "Kevin");
+		System.out.println(list2); // [Adam, Kevin]
+
+		List<Character> list2 = add(new ArrayList<>(), 'a', 'b');
+		System.out.println(list2); // [a, b]
+		
+	}
+}
 ```
 
 ## What are Logs & Logging?
