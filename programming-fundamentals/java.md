@@ -825,10 +825,22 @@ public <T> T getData(T t1, T t2) {
 }
 ```
 - The type inference algorithm tries to find the most specific type that works with all of the arguments
-- If we use this method, so getData method with a strinf and an arraylist, then if a Serializable is used as the return type, there is no need for casting.
+- If we use this method, so getData method with a string and an arraylist, then if a Serializable is used as the return type, there is no need for casting for return type.
+- Both string and array list implements the Serializable interface so we can use something like this without any problem.
 ```java
 Serializable s = getData("Hello World", new ArrayList<>());
 ```
+- Another feature of Type inference is that we can use class instantiation like this
+```java
+List<String> list = new ArrayList<>();
+```
+- So whenever we instantiate an array list, like a list in the generic manner, means that we have to define the type. The items we are going to store in the underlying one-dimensional array and then we can define the string with the <> diamond operator.
+- But due to Type inference algorithm, we can use class instantiation without having to specify that the arraylist is going to store strings because the compiler is going to know we are going to use a list interface and it is equals to a new arraylist implementation.
+- Type inference enables us to invoke a generic method as an ordinary Java method without specifying the type
+
+```java
+```
+
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
 - Logging is the action of keeping the logs.
