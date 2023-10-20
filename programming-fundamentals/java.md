@@ -814,6 +814,21 @@ Bounded types allow you to invoke methods defined in the bounds?
 - True
 ```
 
+## Type Inference
+- Type inference is the ability of the compiler to look at each method invocation and corresponding declaration
+- To determine the type argument(s) such as T generic type - that make the invocation applicable
+- The type inference algorithm determines <T> type of the arguments + the type that the result is being assigned ore returned if available
+
+```java
+public <T> T getData(T t1, T t2) {
+   return t1;
+}
+```
+- The type inference algorithm tries to find the most specific type that works with all of the arguments
+- If we use this method, so getData method with a strinf and an arraylist, then if a Serializable is used as the return type, there is no need for casting.
+```java
+Serializable s = getData("Hello World", new ArrayList<>());
+```
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
 - Logging is the action of keeping the logs.
