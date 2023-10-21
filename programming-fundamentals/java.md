@@ -944,6 +944,35 @@ public class App {
 	}
 }
 ```
+## Subtyping
+- Fundamental principle in object-oriented programming
+- One type is a subtype of another if they're related by "extends" or "implements" clause
+```
+Integer is a subtype of Number (Integer extends Number class)
+ArrayList<E> is a subtype of List<E> 
+(Transitive property "relationship": if the ArrayList is a subtype of List and List is a subtype of Collection, then ArrayList is a subtype of Collection)
+List<E> is a subtype of Collection<E>
+```
+- In Java, we can create interfaces and the given class can implement a given interface
+- A given class may extend another class - Inheritance
+- With the help of inheritance we can define subclasses and parent classes or super classes
+- If one type is a subtype of another, then it means that the second is a supertype of the first
+	- Number is a supertype of Integer
+ 	- List is a supertype of ArrayList
+	- Collection is a supertype of List and ArrayList
+- Despite the fact that Integer is a subtype of Number, if we created a List of Integers, it is not a subtype for a List of Numbers
+```
+List<Integer> is not a subtype of List<Number>
+```
+
+
+
+
+
+
+
+
+
 
 ## What are Logs & Logging?
 - A log is a file that records the events that occur in an operating system or application.
